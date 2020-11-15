@@ -1,0 +1,53 @@
+@use '../utilities';
+
+/*----------------------***** PRODUCT ***** ----------------------*/
+
+.div__cita__contactos {
+    @include utilities.display-flex-row(3);
+    margin-top: 2em;
+
+    .div__cita, 
+    .div__contactos {
+        margin-top: 1em;
+        padding: map-get($map: utilities.$pad, $key: 'XL');
+        flex-grow: 1;
+        @include utilities.display-flex-column(1);
+
+        h1 {
+            font-family: utilities.$fuente_titulo;
+            font-size: map-get($map: utilities.$tamanio-fuente, $key: 'M');
+            letter-spacing: 2.5px;
+            text-align: center;
+        }
+
+        a {
+            padding: 2em 1em;
+            padding-bottom: 1em;
+            font-family: utilities.$fuente_menu;
+            font-size: map-get($map: utilities.$tamanio-fuente, $key: 'M');
+            letter-spacing: 3px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms;
+            
+            &:hover {
+                transform: scale(1.5,1.5);
+            }
+        }
+
+        
+    }
+}
+
+@keyframes deArriba {
+    0%{
+        transform: translateY(0em);
+        opacity: 0;
+    }50%{
+        transform: translateY(-3em);
+        opacity: 0;
+    }100%{
+        transform: translateY(0em);
+        opacity: 1;
+    }
+}   

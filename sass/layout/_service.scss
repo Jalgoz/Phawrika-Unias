@@ -1,0 +1,106 @@
+@use '../utilities';
+
+/*----------------------***** SERVICE ***** ----------------------*/
+.div__servicio {
+    @include utilities.display-flex-row(2);
+    margin-top: 3em;
+}
+
+hr {
+    margin-top: 3em;
+}
+
+.div__servicios__titulo {
+    flex-basis: 100%;
+    @include utilities.display-grid(0,0,0,map-get($map: utilities.$gap, $key: 'L'));
+    grid-template-columns: 1fr 4fr 1fr;
+    margin-bottom: 2em;
+
+    h1 {
+        grid-column: 1/-1;
+        font-family: utilities.$fuente_menu;
+        letter-spacing: 2.5px;
+        text-align: center;
+        color: utilities.$color_celeste;
+        text-decoration: underline;
+        font-size: map-get($map: utilities.$tamanio-fuente, $key: "XL");
+    }
+
+    p {
+        grid-column: 2/3;
+        line-height: map-get($map: utilities.$interlineado, $key: 'recomendado');
+        font-family: utilities.$parrafo;
+        font-size: map-get($map: utilities.$tamanio-fuente, $key: 'S');
+        text-align: center;
+    }
+}
+
+.div__servicio__box {
+    flex-basis: 33%;
+    flex-grow: 1;
+    height: 400px;
+
+    .div__servicio__img {
+        height: 100%;
+        width: 100%;
+        position: relative; 
+        @include utilities.display-flex-row(1);
+        perspective: 1000px;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        div {
+            backface-visibility: hidden;
+            transform: rotateX(180deg);
+            transition: all 300ms;
+            padding: map-get($map: utilities.$pad, $key: 'XL');
+            position: absolute;
+
+            p {               
+                text-align: center;
+                line-height: map-get($map: utilities.$interlineado, $key: 'recomendado');
+                font-family: utilities.$parrafo;
+                font-weight: bold;
+                font-size: map-get($map: utilities.$tamanio-fuente, $key: 'XS');
+                padding: map-get($map: utilities.$pad, $key: 'XL');
+                background-color: rgba($color: utilities.$color_gris, $alpha: 0.6);
+                color: utilities.$color_claro;
+            }
+        }
+    }
+
+    .div__servicio__img:hover img {
+        opacity: 0.8;
+        background-color: utilities.$color_gris_oscuro;
+    }
+
+    .div__servicio__img:hover div {
+        transform: rotateX(0deg);
+    }
+}
+
+.div__servicio__reserva {
+    flex-basis: 100%;
+    margin-top: 2.5em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        font-family: utilities.$fuente_menu;
+        font-size: map-get($map: utilities.$tamanio-fuente, $key: 'M');
+        letter-spacing: 3px;
+        text-decoration: none;
+        transition: all 300ms;
+        color: black;
+
+        &:hover {
+            transform: scale(1.5,1.5);
+            text-decoration: underline;
+        }
+    }
+} 

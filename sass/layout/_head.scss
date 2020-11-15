@@ -1,0 +1,64 @@
+@use '../utilities';
+
+/*----------------------***** HEADER ***** ----------------------*/
+.header-inicio__menu {
+           
+    ul {
+        width: 100%;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        @include utilities.display-grid(1,5);
+        padding: map-get( $map: utilities.$pad, $key: 'XS' );
+        background-color: utilities.$color_gris;
+        opacity: 0.8;
+        border-bottom: 3px solid rgba($color: utilities.$color_celeste, $alpha: 0.7);
+        z-index: 10;
+
+        li:first-child {
+            grid-column: 1/-1;
+
+            a {
+                color: utilities.$color_celeste;
+                font-size: map-get( $map: utilities.$pad, $key: 'S' );
+                text-transform: none;
+            }
+        }
+
+        li {
+            list-style: none;
+            @include utilities.display-flex-row(1);
+
+            img {
+                height: 3em;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-family: utilities.$fuente_menu;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                opacity: 1; 
+                transition: all 300ms;
+            }
+
+            a:hover {
+                transform: scale(1.3, 1.3);
+            }
+        }
+    }
+}
+.header-inicio__titulo {
+    background-color: utilities.$color_gris_oscuro;
+    margin-top: 95px;
+    padding: 2.5em;
+
+    h1 {
+        color: utilities.$color_claro;
+        font-family: utilities.$fuente_titulo;
+        font-size: map-get( $map: utilities.$tamanio-fuente, $key: 'XL' );
+        text-align: center;
+    }
+}
+

@@ -1,0 +1,210 @@
+@use '../utilities';
+
+/*----------------------***** INDEX ***** ----------------------*/
+.main-us {
+    h2 {
+        font-family: utilities.$fuente_titulo;
+        font-size: map-get($map: utilities.$tamanio-fuente, $key: 'XL');
+    }
+}
+
+.section__nosotros {
+    padding-top: 5em;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+
+    .div__nosotros__img {
+        display: flex;
+        justify-content: center;
+        height: 350px;
+        position: relative;
+
+        .div__img {
+            width: 50%;   
+            @include utilities.display-flex-row(1);
+            perspective: 1000px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border: 2px solid black;
+                z-index: 1;
+            }
+
+            .div__fondo {
+                position: absolute;             
+                height: 100%;
+                width: 100%;
+                transition: all 500ms;    
+            }
+
+            .primero, .segundo {
+                z-index: -1;
+                transform: rotate(20deg);
+                box-shadow: 0px 0px 2px utilities.$color_gris, 2px 2px 3px utilities.$color_gris, -2px -2px 3px utilities.$color_gris;
+                background-color: utilities.$color_claro;
+            }
+
+            .segundo {
+                transform: rotate(-20deg);
+            }
+        }
+
+        .div__img:hover .primero,
+        .div__img:hover .segundo{
+            box-shadow: none;
+            background-color: white;
+        }       
+    }
+
+    .div__nosotros {
+        @include utilities.display-flex-column(1);
+        padding: map-get($map: utilities.$pad, $key: 'XL');
+
+        p {
+            font-family: utilities.$parrafo;
+            line-height: map-get($map: utilities.$interlineado, $key: 'recomendado');
+            font-size: map-get($map: utilities.$tamanio-fuente, $key: 'XS');
+        }
+    }
+
+    .div__nosotros__personal {
+        grid-column: 1/-1;
+        @include utilities.display-grid(1,3);
+        padding: map-get($map: utilities.$pad, $key: 'XL');
+        padding-bottom: 0;
+        margin-top: 3em;
+        
+
+        .div__personal {
+            border-top: 2px solid utilities.$color_gris;
+            @include utilities.display-flex-column(1);
+            padding: map-get($map: utilities.$pad, $key: 'S');
+            padding-bottom: 0;
+
+            .personal {
+                height: 200px;
+                border: 2px solid black;
+                border-radius: 1000em;
+                background-color: utilities.$color_claro;
+                padding: map-get($map: utilities.$pad, $key: 'XL');
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            h3 {
+                font-family: utilities.$fuente_menu;
+                letter-spacing: 3px;
+                padding: map-get($map: utilities.$pad, $key: 'XS');
+            }
+
+            h5 {
+                font-family: utilities.$parrafo;
+                padding: map-get($map: utilities.$pad, $key: 'XS');
+                color: utilities.$color_celeste;
+                font-size: map-get($map: utilities.$tamanio-fuente, $key: 'S');;
+            }
+
+            p {
+                width: 65%;
+                font-family: utilities.$parrafo;
+                text-align: center;
+                line-height: map-get($map: utilities.$interlineado, $key: 'recomendado');          
+            }
+        }
+    }
+}
+
+.section__hr {
+    height: 150px;
+    perspective: 1000px;
+    @include utilities.display-grid(2,0,2,0);
+    overflow: hidden;
+
+    .hr-blanco {
+        background-color: white;
+        transform: rotateZ(-1.5deg);
+        height: 100%;
+        top: 3em;
+        right: 0.01em;
+        position: relative;
+        z-index: 1;
+        border-bottom: 2px solid utilities.$color_gris;
+    }
+
+    .hr-celeste{
+        height: 100%;
+        background-color: utilities.$color_celeste;
+        position: relative;
+    }
+}
+
+.section__mision__vision {
+    background-color: utilities.$color_celeste;
+    @include utilities.display-grid(1,2,0,map-get($map: utilities.$gap, $key: 'M'));
+    overflow: hidden;
+
+    h2 {
+        color: white;
+        text-align: center;
+    }
+
+    .div__mision,
+    .div__vision {
+        padding:  map-get($map: utilities.$pad, $key: 'XXL');
+        padding-bottom: 0;
+
+        p {
+            font-family: utilities.$parrafo;
+            line-height: map-get($map: utilities.$interlineado, $key: 'recomendado');
+            padding: 2em 3em;
+            text-align: center;
+            color: utilities.$color_gris;
+            font-size: 20px;
+        }
+    }
+
+    .hr {
+        grid-column: 1/-1;
+        background-color: white;
+        height: 75px;
+        transform: rotateZ(1.65deg);
+        z-index: 1;
+        position: relative;
+        top: 1.35em;
+        border-top: 2px solid utilities.$color_gris;
+    }
+}
+
+.section__instalaciones {
+    padding: map-get($map: utilities.$pad, $key: 'XL');
+
+    h2 {
+        text-align: center;
+    }
+
+    .div__instalaciones {
+        @include utilities.display-grid(1,3,0,4em);
+        padding: map-get($map: utilities.$pad, $key: 'XL');
+
+        .div__instalaciones__img {
+            height: 400px;
+            text-align: center;
+            perspective: 1000px;
+
+            img {
+                height: 100%;
+                width: 70%;
+                box-shadow: 1px 1px 3px black, 2px 2px 4px black, -2px -2px 4px black;
+                transform: rotateX(60deg);
+                transition: all 500ms;
+            }
+
+            img:hover {
+                transform: rotateX(0deg) scale(1.1, 1.1);
+            }
+        }
+    }
+}

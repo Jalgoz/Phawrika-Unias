@@ -1,0 +1,17 @@
+@use '../utilities';
+
+/*----------------------***** CONTACT ***** ----------------------*/
+.main-contact {
+    @include utilities.display-grid(1,2);
+    height: 80vh;
+    padding: map-get($map: utilities.$pad, $key: 'XL');
+    margin: 2em 0;
+    justify-items: center;
+    align-content: center;
+
+    .div__formulario {
+        @include utilities.display-flex-row(1);
+        overflow: hidden;
+    }
+}
+
