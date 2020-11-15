@@ -38,7 +38,7 @@
     p {
         font-family: utilities.$parrafo;
         padding: map-get($map: utilities.$pad, $key: 'L');
-        font-size: map-get($map: utilities.$tamanio-fuente, $key: 'S');
+        font-size: map-get($map: utilities.$tamanio-fuente, $key: 'XS');
         line-height: map-get($map: utilities.$interlineado, $key: 'recomendado');
     }
 }
@@ -91,7 +91,7 @@
         p {
             color: white;
             font-family: utilities.$parrafo;
-            font-size: map-get($map: utilities.$tamanio-fuente, $key: 'S');
+            font-size: map-get($map: utilities.$tamanio-fuente, $key: 'XS');
             letter-spacing: 2px;
         }
 
@@ -263,7 +263,7 @@
         background-position: center;
     }
 
-    .div__productos {
+    .div-productos {
         height: 70vh;
         position: relative;
         @include utilities.display-flex-row(1);

@@ -30,7 +30,7 @@ hr {
         grid-column: 2/3;
         line-height: map-get($map: utilities.$interlineado, $key: 'recomendado');
         font-family: utilities.$parrafo;
-        font-size: map-get($map: utilities.$tamanio-fuente, $key: 'S');
+        font-size: map-get($map: utilities.$tamanio-fuente, $key: 'XS');
         text-align: center;
     }
 }

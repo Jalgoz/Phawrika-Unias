@@ -450,7 +450,7 @@
 .main-inicio p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 1.5em;
-  font-size: 1.25em;
+  font-size: 1em;
   line-height: 1.7em;
 }
 
@@ -522,7 +522,7 @@
 .section__reserva .div__reserva p {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.25em;
+  font-size: 1em;
   letter-spacing: 2px;
 }
 .section__reserva .div__reserva a {
@@ -720,7 +720,7 @@
   background-size: cover;
   background-position: center;
 }
-.section__final .div__productos {
+.section__final .div-productos {
   height: 70vh;
   position: relative;
   display: -webkit-box;
@@ -784,6 +784,7 @@
 .main-us h2 {
   font-family: "Josefin";
   font-size: 3em;
+  margin-bottom: 1em;
 }
 
 .section__nosotros {
@@ -1162,7 +1163,7 @@ hr {
   grid-column: 2/3;
   line-height: 1.7em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.25em;
+  font-size: 1em;
   text-align: center;
 }
 
@@ -1413,5 +1414,460 @@ footer .rights strong a {
 }
 footer .rights strong a:hover {
   text-decoration: underline;
+}
+
+/*----------------------***** RESPONSIVE ***** ----------------------*/
+@media (max-width: 1200px) {
+  .main-inicio .main-inicio__titles h1 {
+    font-size: 1.25em;
+  }
+
+  .div__img--efect-position {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .div__img--efect-position .img__medium {
+    display: none;
+  }
+  .div__img--efect-position .img__above {
+    height: 80%;
+    left: 40%;
+    top: 20%;
+  }
+
+  .main-contact {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+  .main-contact .div__img--efect-position {
+    display: none;
+  }
+
+  .section__noticias .div__noticias .div__noticia .a__leer {
+    width: 90%;
+  }
+
+  .section__nosotros .div__nosotros__img .div__img {
+    width: 70%;
+  }
+
+  .div__productos .div__producto {
+    width: 90%;
+  }
+}
+@media (max-width: 1024px) {
+  .header-inicio .header-inicio__menu ul li a {
+    font-size: 15px;
+  }
+
+  main p {
+    font-size: 1em;
+  }
+
+  .div__img--efect-position .img__behind {
+    position: static;
+  }
+  .div__img--efect-position .img__behind img {
+    height: 400px;
+  }
+  .div__img--efect-position .img__above {
+    display: none;
+  }
+
+  .header-inicio__titulo {
+    margin-top: 93px;
+  }
+
+  .section__calidad .div__calidad__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .section__calidad .div__calidad__img img {
+    height: 70%;
+  }
+
+  .section__calidad .div__calidad ul li {
+    font-family: inherit;
+    font-size: 16px;
+  }
+
+  .section__noticias .div__noticias {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section__final .div__contacto img {
+    width: 100%;
+  }
+
+  .section__final .div-productos,
+.section__final .div__contacto,
+.section__final .div__servicios {
+    height: 55vh;
+  }
+
+  .section__mision__vision .div__mision p, .section__mision__vision .div__vision p {
+    padding: 1em 1em;
+  }
+
+  .section__nosotros .div__nosotros__img {
+    height: 80%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .section__mision__vision .div__mision p, .section__mision__vision .div__vision p {
+    padding: 1em 1em;
+  }
+
+  .section__instalaciones .div__instalaciones .div__instalaciones__img img {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    width: 90%;
+  }
+
+  .main-contact .form {
+    margin-top: 2em;
+    width: 80%;
+  }
+
+  .div__productos .div__producto {
+    width: 100%;
+  }
+
+  .div__servicio__box .div__servicio__img div {
+    padding: 0em;
+  }
+
+  .div__servicio__box .div__servicio__img div p {
+    padding: 1em;
+  }
+
+  footer .footer__map {
+    width: 100%;
+  }
+
+  footer .footer__make ul li {
+    font-size: 16px;
+  }
+
+  footer .footer__contact .footer__contact-info span {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .header-inicio .header-inicio__menu ul {
+    position: static;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .header-inicio .header-inicio__banner .header-inicio__banner-img {
+    height: 75vh;
+  }
+
+  .main-inicio .main-inicio__titles {
+    width: 80%;
+  }
+
+  main p {
+    text-align: justify;
+  }
+
+  .section__cabecera {
+    grid-template-columns: 1fr;
+  }
+  .section__cabecera .div__imgs {
+    display: none;
+  }
+
+  .section__calidad {
+    grid-template-columns: 1fr;
+  }
+  .section__calidad .div__calidad__img {
+    display: none;
+  }
+
+  main .section__noticias .div__titulo {
+    width: 85%;
+  }
+
+  .section__final {
+    grid-template-columns: 1fr;
+  }
+
+  .section__final .div__productos,
+.section__final .div__servicios,
+.section__final .div__contacto {
+    height: 50vh;
+  }
+
+  .header-inicio__titulo {
+    margin-top: 0px;
+  }
+
+  .section__nosotros {
+    grid-template-columns: 1fr;
+    padding-top: 1em;
+  }
+
+  .section__nosotros .div__nosotros__personal {
+    grid-template-columns: 1fr;
+  }
+
+  .header-inicio__titulo h1 {
+    font-size: 30px;
+  }
+
+  .section__nosotros .div__nosotros__img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .section__nosotros .div__nosotros__personal {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .main h2 {
+    font-size: 30px;
+    margin-bottom: 1em;
+  }
+
+  .section__nosotros {
+    margin-top: 1em;
+  }
+
+  .section__mision__vision .div__mision p, .section__mision__vision .div__vision p {
+    padding: 1em 0em;
+  }
+
+  .section__nosotros .div__nosotros__img .div__img .primero, .section__nosotros .div__nosotros__img .div__img .segundo {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+
+  .section__nosotros .div__nosotros__img .div__img .primero, .section__nosotros .div__nosotros__img .div__img .primera {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+  }
+
+  .section__nosotros .div__nosotros__img {
+    height: 350px;
+  }
+
+  .section__nosotros .div__nosotros__img .div__img {
+    width: 50%;
+  }
+
+  .section__nosotros .div__nosotros__personal {
+    margin-top: 1em;
+  }
+
+  .section__nosotros .div__nosotros__personal .div__personal {
+    padding-bottom: 2em;
+  }
+
+  .section__mision__vision {
+    grid-template-columns: 1fr;
+  }
+
+  .section__instalaciones .div__instalaciones {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    padding: 2em 0em;
+    padding-bottom: 0em;
+  }
+
+  .section__instalaciones .div__instalaciones .div__instalaciones__img img {
+    width: 100%;
+  }
+
+  .main-contact {
+    height: auto;
+  }
+  .main-contact .form {
+    width: 100%;
+    padding: 0;
+  }
+
+  .main-contact .form form {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .main-contact .form form div label {
+    text-align: center;
+  }
+
+  .main-contact .form form div {
+    grid-template-columns: 1fr;
+  }
+
+  .div__productos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .div__productos .div__producto .producto__info p {
+    display: none;
+  }
+
+  .div__producto .div__carrito {
+    background-color: #00adb5;
+  }
+
+  .div__productos .div__producto .div__carrito i,
+.div__productos .div__producto .div__carrito a {
+    opacity: 1;
+  }
+
+  .div__servicio__box {
+    height: 250px;
+  }
+
+  .div__servicio__box .div__servicio__img div p {
+    font-size: 16px;
+  }
+
+  .div__servicio__box {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+
+  footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer .footer__map {
+    grid-column: 1/-1;
+  }
+
+  footer .footer__contact .footer__contact-info .footer__contact-networks a i {
+    font-size: 2em;
+  }
+
+  footer .rights strong {
+    font-size: 1em;
+  }
+
+  footer .rights strong a {
+    font-size: 1em;
+  }
+}
+@media (max-width: 480px) {
+  .section__cabecera {
+    margin-top: 0em;
+  }
+
+  .section__reserva {
+    margin: 0px;
+  }
+
+  .section__calidad {
+    margin-bottom: 0em;
+  }
+
+  .section__noticias .div__noticias {
+    grid-template-columns: 1fr;
+  }
+
+  .section__final {
+    margin: 0px;
+    grid-gap: 0px;
+  }
+
+  .section__final .div__productos,
+.section__final .div__servicios,
+.section__final .div__contacto img {
+    border: none;
+  }
+
+  .section__final .div__productos,
+.section__final .div__servicios {
+    border-bottom: 1px solid #00adb5;
+  }
+
+  .section__final a h2 {
+    text-decoration: underline;
+  }
+
+  .section__nosotros .div__nosotros__img .div__img {
+    width: 70%;
+  }
+
+  .section__mision__vision .div__mision p, .section__mision__vision .div__vision p {
+    font-size: 16px;
+  }
+
+  .section__instalaciones .div__instalaciones {
+    grid-template-columns: 1fr;
+  }
+
+  .main-contact {
+    padding: 0.625em;
+  }
+
+  .productos {
+    padding: 0;
+  }
+  .productos .div__mensaje p {
+    width: 85%;
+  }
+
+  .div__mensaje img {
+    height: 100px;
+  }
+
+  .div__productos {
+    grid-template-columns: 1fr;
+  }
+
+  .div__cita__contactos .div__cita h1, .div__cita__contactos .div__contactos h1 {
+    font-size: 24px;
+  }
+
+  .div__servicios__titulo {
+    grid-template-columns: 0fr 10fr 0fr;
+  }
+
+  .div__servicios__titulo h1 {
+    font-size: 35px;
+  }
+
+  .div__servicio__box {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    margin-top: 1em;
+  }
+}
+@media (max-width: 360px) {
+  .div__servicio__box .div__servicio__img div {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

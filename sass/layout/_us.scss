@@ -5,6 +5,7 @@
     h2 {
         font-family: utilities.$fuente_titulo;
         font-size: map-get($map: utilities.$tamanio-fuente, $key: 'XL');
+        margin-bottom: 1em;
     }
 }
 
