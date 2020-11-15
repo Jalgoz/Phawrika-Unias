@@ -31,7 +31,7 @@
             font-family: utilities.$fuente_titulo;
             text-align: center;
             font-size: map-get($map: utilities.$tamanio-fuente, $key: 'M');
-            padding: map-get($map: utilities.$pad, $key: 'XL');
+            padding: map-get($map: utilities.$pad, $key: 'S');
         }
     } 
     

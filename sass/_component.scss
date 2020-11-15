@@ -1,7 +1,60 @@
 @use 'utilities';
 
 /*----------------------***** COMPONENTS ***** ----------------------*/
+.hide{
+    display: none !important;
+}
+.nav_bar {
+    @include utilities.display-flex-row(1);
+    align-items: flex-start;
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+    width: 0px;
+    background-color: utilities.$color_gris;
+    opacity: 0.2;
+    overflow: hidden;
 
+    ul {
+        margin-top: 2em;
+    }
+    
+    li {
+        list-style: none;
+        padding: map-get($map: utilities.$pad, $key: 'S');
+        text-align: center;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: map-get( $map: utilities.$tamanio-fuente, $key: 'XS' );
+    }
+
+    .hashtag {
+        a {
+            color: utilities.$color_celeste;
+        }
+    }
+
+    .registro-usu {
+        padding: map-get($map: utilities.$pad, $key: 'XS');
+        border: 2px solid white;
+        margin-bottom: 10px;
+
+        a {
+            color: utilities.$color_celeste;
+        }
+    }
+
+    .hide-user {
+        display: none;
+    }
+    img {
+        height: 50px;
+        width: 50px;
+    }
+}
 /* Mensaje Pagina */
 .div__mensaje {
     margin: 2em 0em;

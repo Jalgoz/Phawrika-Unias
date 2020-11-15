@@ -1,7 +1,11 @@
 @use 'utilities';
 
 /*----------------------***** RESPONSIVE ***** ----------------------*/
+
 @media (max-width: map-get($map: utilities.$media-query, $key: 'XL')) {
+    .active{
+        display: block !important;
+    }
     .main-inicio .main-inicio__titles h1 {
         font-size: map-get($map: utilities.$tamanio-fuente, $key: 'S');
     }
@@ -16,6 +20,28 @@
             left: 40%;
             top: 20%;
         }
+    }
+    .header-inicio__menu > ul { 
+        grid-template-columns: 0.5fr 3fr 1fr;
+    }
+    .header-inicio__menu .registros {
+        display: none;
+        position: absolute;
+        width: 160px;
+        top: 85px;
+        // @include utilities.display-flex-column(1);
+        
+        li {
+            border: 3px solid #00adb5 !important;
+            border-top: none !important;
+        }
+    }
+    .header-inicio__menu .hide-user {
+        display: block;
+    }
+    .header-inicio__menu .registros li {
+        display: block !important;
+        background-color: utilities.$color_gris;
     }
 
     .main-contact {
@@ -40,10 +66,14 @@
 }
 
 @media (max-width: map-get($map: utilities.$media-query, $key: 'L')){
-    .header-inicio .header-inicio__menu ul li a {
-        font-size: 15px;
+    .blue {
+        background-color: utilities.$color_celeste !important;
+        left: 350px !important;
     }
-
+    .expansion {
+        width: 380px !important;
+        opacity: 1 !important;
+    }
     main p {
         font-size: map-get($map: utilities.$tamanio-fuente, $key: 'XS');;
     }
@@ -63,7 +93,7 @@
     }
     
     .header-inicio__titulo {
-        margin-top: 93px;
+        margin-top: 1px;
     }
 
     .section__calidad .div__calidad__img {
@@ -146,12 +176,6 @@
 }
 
 @media (max-width:  map-get($map: utilities.$media-query, $key: 'M')) {
-
-    .header-inicio .header-inicio__menu ul {
-        position: static;
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-    }
 
     .header-inicio .header-inicio__banner .header-inicio__banner-img {
         height: 75vh;
@@ -345,7 +369,15 @@
 }
 
 @media (max-width: 480px){
-
+    .blue {
+        left: 82vw !important;
+    }
+    .expansion {
+        width: 100vw !important;
+    }
+    .main-us h2 {
+        font-size: 1.7em;
+    }
     .section__cabecera {
         margin-top: 0em;
     }
@@ -438,6 +470,9 @@
 @media (max-width: 360px) {
     .div__servicio__box .div__servicio__img div {
         display: none;
+    }
+    .blue {
+        left: 77vw !important;
     }
 }
 
