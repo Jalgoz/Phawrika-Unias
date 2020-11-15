@@ -1,0 +1,113 @@
+/* FUENTES */
+@font-face{
+    font-family: "TrebuchetMS";
+
+    src: url('../fonts/TrebuchetMS.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "BebasNeue";
+
+    src: url('../fonts/BebasNeue.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "blackOps";
+
+    src: url('../fonts/BlackOpsOne-Regular.ttf');
+
+    font-weight: normal;
+    
+}
+@font-face{
+    font-family: "WebSymbolsRegular";
+    src: url('../fonts/websymbols-regular-webfont.eot');
+    src: url('../fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/websymbols-regular-webfont.woff') format('woff'),
+         url('../fonts/websymbols-regular-webfont.ttf') format('truetype'),
+         url('../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+
+    font-weight: normal;
+    font-style: normal;     
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url('../fuentes/Orbitron-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: "Josefin";
+    src: url('../fuentes/Josefin_Sans/static/JosefinSans-SemiBold.ttf');
+}
+
+// Variables
+$color_gris : #393e46;
+$color_gris_oscuro : #222831;
+$color_celeste: #00adb5;
+$color_claro: #eeeeee;
+$colo_gris_claro: #777;
+
+$interlineado: 1.7em;
+
+$parrafo: "BebasNeue";
+$menu: serif;
+$titulo : "TrebuchetMS";
+$especial: "blackOps";
+$simbolos: "WebSymbolsRegular";
+
+$media-query: ("XL": 1200px, "L": 1024px, "M": 768px, "S": 470px);
+$pad: ("XL": 4em, "L": 3em, "M": 2em, "S": 1em, "XS": 0.5em);
+$gap: ("XL": 2em, "L": 1.5em, "M": 1em, "S": 0.5em, "XS": 0.3em);
+$interlineado: ("doble": 2.5em, "recomendado": 1.7em, "normal": 1.3em);
+
+//mixins
+@mixin borde3D( $color ) {
+    box-shadow: 0px 0px 1px $color, 1px 1px 2px $color, 2px 2px 3px $color, 3px 3px 4px $color, 4px 4px 5px $color;
+}
+
+@mixin display-flex-row( $valor ) {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    @if $valor == 1 {
+        justify-content: center;
+    } @else if $valor == 2 {
+        justify-content: space-between;
+    } @else if $valor == 3 {
+        justify-content: space-around;
+    } @else if $valor == 4 {
+        justify-content: space-evenly;
+    }
+}
+
+@mixin display-flex-column( $valor ) {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    @if $valor == 1 {
+        align-items: center;
+    } @else if $valor == 2 {
+        align-items: start;
+    } @else if $valor == 3 {
+        align-items: end;
+    } 
+}
+
+@mixin display-grid ( $direccion, $columnas: 0, $filas: 0, $grid-gap: 0 ) {
+    display: grid;
+    grid-gap: $grid-gap;
+
+    @if $direccion == 1 {
+        grid-template-columns: repeat($columnas, 1fr);
+    } @else if $direccion == 2 {
+        grid-template-rows: repeat($filas, 1fr);
+    } @else if $direccion == 3 {
+        grid-template-columns: repeat($columnas, 1fr);
+        grid-template-rows: repeat($filas, 1fr);
+    }
+}

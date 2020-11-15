@@ -1,0 +1,243 @@
+$fuente_menu: "Orbitron";
+$fuente_titulo: "Josefin";
+
+$color_gris : #393e46;
+$color_gris_oscuro : #222831;
+$color_celeste: #00adb5;
+$color_claro: #eeeeee;
+$colo_gris_claro: #777;
+
+$interlineado: 1.7em;
+
+
+//Valores generales
+@import 'valores_generales.scss';
+
+//Header
+@import 'header.scss';
+
+
+h2 {
+    font-family: $fuente_titulo;
+    font-size: 50px;
+}
+
+.section__nosotros {
+    padding-top: 5em;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+
+    .div__nosotros__img {
+        display: flex;
+        justify-content: center;
+        height: 350px;
+        position: relative;
+
+        .div__img {
+            width: 50%;   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border: 2px solid black;
+                z-index: 1;
+            }
+
+            .div__fondo {
+                position: absolute;             
+                height: 100%;
+                width: 100%;
+                transition: all 500ms;    
+            }
+
+            .primero, .segundo {
+                z-index: -1;
+                transform: rotate(20deg);
+                box-shadow: 0px 0px 2px $color_gris, 2px 2px 3px $color_gris, -2px -2px 3px $color_gris;
+                background-color: $color_claro;
+            }
+
+            .segundo {
+                transform: rotate(-20deg);
+            }
+        }
+
+        .div__img:hover .primero,
+        .div__img:hover .segundo{
+            box-shadow: none;
+            background-color: white;
+        }       
+    }
+
+    .div__nosotros {
+        padding: 2.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        p {
+            font-family: inherit;
+            line-height: $interlineado;
+            font-size: 16px;
+        }
+    }
+
+    .div__nosotros__personal {
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 2em;
+        padding-bottom: 0;
+        margin-top: 3em;
+        
+
+        .div__personal {
+            border-top: 2px solid $color_gris;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+            padding-bottom: 0;
+
+            .personal {
+                height: 200px;
+                border: 2px solid black;
+                border-radius: 1000em;
+                background-color: $color_claro;
+                padding: 2em;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            h3 {
+                font-family: $fuente_menu;
+                letter-spacing: 3px;
+                padding: 10px;
+            }
+
+            h5 {
+                font-family: inherit;
+                padding: 10px;
+                color: $color_celeste;
+                font-size: 20px;
+            }
+
+            p {
+                width: 65%;
+                font-family: inherit;
+                text-align: center;
+                line-height: $interlineado;            
+            }
+        }
+    }
+}
+
+.section__hr {
+    height: 150px;
+    perspective: 1000px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+
+    .hr-blanco {
+        background-color: white;
+        transform: rotateZ(-1.5deg);
+        height: 100%;
+        top: 3em;
+        right: 0.01em;
+        position: relative;
+        z-index: 1;
+        border-bottom: 2px solid $color_gris;
+    }
+
+    .hr-celeste{
+        height: 100%;
+        background-color: $color_celeste;
+        position: relative;
+    }
+}
+
+.section__mision__vision {
+    background-color: $color_celeste;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    overflow: hidden;
+
+    h2 {
+        color: white;
+        text-align: center;
+    }
+
+    .div__mision,
+    .div__vision {
+        padding: 3em;
+        padding-bottom: 0;
+
+        p {
+            font-family: inherit;
+            line-height: $interlineado;
+            padding: 2em 3em;
+            text-align: center;
+            color: $color_gris;
+            font-size: 20px;
+        }
+    }
+
+    .hr {
+        grid-column: 1/-1;
+        background-color: white;
+        height: 75px;
+        transform: rotateZ(1.65deg);
+        z-index: 1;
+        position: relative;
+        top: 1.35em;
+        border-top: 2px solid $color_gris;
+    }
+}
+
+.section__instalaciones {
+    padding: 2em;
+
+    h2 {
+        text-align: center;
+    }
+
+    .div__instalaciones {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 2em;
+        grid-gap: 4em;
+
+        .div__instalaciones__img {
+            height: 400px;
+            text-align: center;
+            perspective: 1000px;
+
+            img {
+                height: 100%;
+                width: 70%;
+                box-shadow: 1px 1px 3px black, 2px 2px 4px black, -2px -2px 4px black;
+                transform: rotateX(60deg);
+                transition: all 500ms;
+            }
+
+            img:hover {
+                transform: rotateX(0deg) scale(1.1, 1.1);
+            }
+        }
+    }
+}
+
+//Footer
+@import 'footer.scss';
+
+//Responsive
+@import 'mediaQuerys.scss';
