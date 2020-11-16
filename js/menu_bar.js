@@ -37,10 +37,6 @@ $( () => {
         flag = !flag;
     });
 
-    $('.target').click( () => {
-        
-    }); 
-
     removerClases(XL);
     XL.addListener(removerClases);
 

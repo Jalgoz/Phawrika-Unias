@@ -465,6 +465,14 @@
         grid-template-columns: 1fr;
         margin-top: 1em;
     }
+    .view__register form {
+        padding: map-get($map: utilities.$pad, $key: 'L') !important;
+        padding-top: 0 !important;
+        input {
+            width: 200px !important;
+        }
+    }
+    
 }
 
 @media (max-width: 360px) {

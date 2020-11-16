@@ -1,0 +1,126 @@
+@use 'utilities';
+
+/*----------------------***** VIEW ***** ----------------------*/
+
+.view__register, .view__log-in {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    @include utilities.display-flex-row(1);
+    transition: all 300ms;
+
+    form {
+        z-index: 201;
+        padding: map-get($map: utilities.$pad, $key: 'XXL');
+        padding-top: 0;
+        padding-bottom: map-get($map: utilities.$pad, $key: 'L');
+        background-color: white;
+        border: 6px solid utilities.$color_celeste;
+        border-radius: 7px;
+    
+        input {
+            width: 250px;
+            height: 25px;
+            border: none;
+            border-bottom: 3px solid utilities.$color_gris;
+            padding-left: 5px;
+            transition: all 300ms;
+        }
+        input:focus {
+            border-bottom: 3px solid utilities.$color_celeste;
+        }
+        .view__register-field--placeholder {
+            margin-bottom: 25px;
+            position: relative;
+
+            p {
+                top: 2px;
+                left: 5px;
+                opacity: 0.5;
+                position: absolute;
+                font-family: utilities.$parrafo;
+                transition: all 400ms;
+            }
+
+            &:hover p{
+                top: -19px;
+            }
+        }
+        .view__register-field--placeholder-date {
+            margin-bottom: 25px;
+
+            p {
+                font-family: utilities.$parrafo;
+                margin-left: 5px;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    background-color: rgba($color: utilities.$color_gris, $alpha: 0.7);
+}
+
+.view__register-title {
+    margin-top: -6px;
+    height: 80px;
+    @include utilities.display-flex-row(1);
+    border-top: 6px solid utilities.$color_gris_oscuro;
+
+    span {
+        font-family: utilities.$fuente_titulo;
+    }
+
+    .span-segundo {
+        color: utilities.$color_celeste;
+    }
+}
+
+.botones {
+    @include utilities.display-flex-row(3);
+
+    button, a {
+        @include utilities.display-flex-row(3);
+        padding: map-get($map: utilities.$pad, $key: 'XS') !important;
+        width: 120px;
+        border: 2px solid utilities.$color_gris;
+        background-color: utilities.$color_celeste;
+        color: white;
+        font-family: utilities.$parrafo !important;
+        transition: all 500ms;
+
+        &:hover {
+            border: 2px solid utilities.$color_celeste;
+            background-color: utilities.$color_gris;
+            color: utilities.$color_celeste;
+        }
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    button {
+        padding: 10px !important; 
+        font-size: 16px;
+    }
+}
+
+.view__log-in .botones {
+    @include utilities.display-flex-column(1);
+
+    button, a {
+        width: 170px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        order: 1;
+    }
+}

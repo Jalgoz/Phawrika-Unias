@@ -18,7 +18,7 @@
         <div class="target hide">
             <a>&#9776;</a>
         </div>
-        
+
         <nav class="header-inicio__menu">
             <ul>
                 <li class="hashtag"><a href="#">#PhawrikaDeUñas</a></li>
@@ -31,9 +31,9 @@
                 </div>
                 <li>
                     <a class="hide-user"><i class="fas fa-user-friends"></i> <i class="fas fa-angle-down"></i></a>
-                    <ul class="registros" >
-                        <li class="registro-usu"><a>Iniciar Sesion</a></li>
-                        <li class="registro-usu"><a>Registrarse</a></li>
+                    <ul class="registros">
+                        <li class="registro-usu log-in"><a>Iniciar Sesion</a></li>
+                        <li class="registro-usu sign-in"><a>Registrarse</a></li>
                     </ul>
                 </li>
 
@@ -126,11 +126,82 @@
         <div class="rights">
             <strong>Todos los derechos reservados <a href="#">PhawrikaUñas</a> &copy;</strong>
         </div>
-    </footer>
+    </footer> 
+
+    <div class="view__register hide">
+        <div class="overlay"></div>
+
+        <form action="">
+            <div class="view__register-title">
+                <h3><span class="span-primero">REGISTRO</span><span class="span-segundo"> USUARIO</span></h3>
+            </div>
+
+            <div class="view__register-field--placeholder">
+                <p><i class="fas fa-font"></i> Nombre</p>
+                <input type="text" class="input" name="nombre" id="nombre">
+            </div>
+
+            <div class="view__register-field--placeholder">
+                <p><i class="fab fa-black-tie"></i> Apellidos</p>
+                <input type="text" class="input" name="apellido" id="apellido">
+            </div>
+
+            <div class="view__register-field--placeholder">
+                <p><i class="fas fa-user"></i> Usuario</p>
+                <input type="text" class="input" name="usuario" id="usuario">
+            </div>
+
+            <div class="view__register-field--placeholder-date">
+                <p><i class="far fa-calendar-alt"></i> Fecha nacimiento</p>
+                <input type="date" id="fecha" name="fecha" value="1995-01-01" min="1920-01-01" max="2015-01-01">
+            </div>
+
+            <div class="view__register-field--placeholder">
+                <p><i class="far fa-envelope"></i> Correo</p>
+                <input class="input" type="email" name="correo" id="correo">
+            </div>
+
+            <div class="view__register-field--placeholder">
+                <p><i class="fas fa-key"></i> Contraseña</p>
+                <input class="input" type="current-password" name="clave" id="clave">
+            </div>
+
+            <div class="botones">
+                <a class="btnCerrar">Cerrar <i class="far fa-window-close"></i></a>
+                <button type="submit" class="btnEnviar">Registrar <i class="fas fa-sign-in-alt"></i></button>
+            </div>
+        </form>
+    </div>
+
+    <div class="view__log-in hide">
+        <div class="overlay"></div>
+
+        <form action="">
+            <div class="view__register-title">
+                <h3><span class="span-primero">INICIAR</span><span class="span-segundo"> SESION</span></h3>
+            </div>
+
+            <div class="view__register-field--placeholder">
+                <p><i class="fas fa-user"></i> Usuario</p>
+                <input type="text" class="input" name="usuario" id="usuario">
+            </div>
+
+            <div class="view__register-field--placeholder">
+                <p><i class="fas fa-key"></i> Contraseña</p>
+                <input class="input" type="current-password" name="clave" id="clave">
+            </div>
+
+            <div class="botones">
+                <a class="btnCerrar">Cerrar <i class="far fa-window-close"></i></a>
+                <button type="submit" class="btnEnviar">Iniciar sesion <i class="fas fa-sign-in-alt"></i></button>
+            </div>
+        </form>
+    </div>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/menu_bar.js"></script>
+    <script src="js/efectos.js"></script>
 
 </body>
 
