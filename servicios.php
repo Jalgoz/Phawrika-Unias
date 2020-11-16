@@ -1,44 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phawrika Uñas</title>
-
-    <link rel="stylesheet" href="css/main.min.css">
-    <link rel="icon" href="img/icon.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-</head>
-
-<body>
-    <header class="header-inicio">
-        <div class="target hide">
-            <a>&#9776;</a>
-        </div>
-        
-        <nav class="header-inicio__menu">
-            <ul>
-                <li class="hashtag"><a href="#">#PhawrikaDeUñas</a></li>
-                <li><a href="inicio.html"><img src="img/icon.png" alt="icono"></a></li>
-                <div class="menu-opciones">
-                    <li><a href="nosotros.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
-                    <li><a href="productos.html"><i class="fas fa-boxes"></i> Productos</a></li>
-                    <li><a href="servicios.html"><i class="fas fa-hand-sparkles"></i> Servicios</a></li>
-                    <li><a href="contactos.html"><i class="fas fa-envelope"></i> Contactanos</a></li>
-                </div>
-                <li>
-                    <a class="hide-user"><i class="fas fa-user-friends"></i> <i class="fas fa-angle-down"></i></a>
-                    <ul class="registros" >
-                        <li class="registro-usu"><a>Iniciar Sesion</a></li>
-                        <li class="registro-usu"><a>Registrarse</a></li>
-                    </ul>
-                </li>
-
-            </ul>
-        </nav>
+    <?php include_once("particiones/head.php"); ?>
 
         <div class="header-inicio__titulo">
             <h1>SERVICIOS</h1>
@@ -266,49 +226,7 @@
 
     </main>
 
-    <footer>
-        <div class="footer__map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d956.3949439597732!2d-68.13472302080346!3d-16.496802549288617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m5!1s0x915f214e73de7279%3A0xf45e635602dfb0c5!2sOvio%20Jeans%20La%20Paz%2C%20Galeria%20Carvajal%2C%20Calle%20Potosi%20%C2%B71156%2C%20La%20Paz!3m2!1d-16.4968884!2d-68.1341458!4m3!3m2!1d-16.496785499999998!2d-68.1343!5e0!3m2!1ses!2sbo!4v1600635154708!5m2!1ses!2sbo"
-                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
-        </div>
-
-        <div class="footer__make">
-            <h3>Que hacemos?</h3>
-
-            <ul>
-                <li>Manicure</li>
-                <li>Pedicure</li>
-                <li>Uñas Acrilicas</li>
-                <li>Pintados</li>
-            </ul>
-        </div>
-
-        <div class="footer__contact">
-            <h3>Contactanos</h3>
-
-            <div class="footer__contact-info">
-                <span><span class="icon"><i class="fas fa-phone"></i></span> 78853112</span>
-                <span><span class="icon"><i class="fas fa-envelope-square"></i></span> esmeralda@gmail.com</span>
-                <span><span class="icon"><i class="fas fa-home"></i></span> Calle potosi #2645</span>
-
-                <div class="footer__contact-networks">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="rights">
-            <strong>Todos los derechos reservados <a href="#">PhawrikaUñas</a> &copy;</strong>
-        </div>
-    </footer>
-
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/menu_bar.js"></script>
+    <?php include_once("particiones/footer.php"); ?>
 
 </body>
 

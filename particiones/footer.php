@@ -1,94 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phawrika Uñas</title>
-
-    <link rel="stylesheet" href="css/main.min.css">
-    <link rel="icon" href="img/icon.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-</head>
-
-<body>
-    <header class="header-inicio">
-        <div class="target hide">
-            <a>&#9776;</a>
-        </div>
-
-        <nav class="header-inicio__menu">
-            <ul>
-                <li class="hashtag"><a href="#">#PhawrikaDeUñas</a></li>
-                <li><a href="inicio.html"><img src="img/icon.png" alt="icono"></a></li>
-                <div class="menu-opciones">
-                    <li><a href="nosotros.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
-                    <li><a href="productos.html"><i class="fas fa-boxes"></i> Productos</a></li>
-                    <li><a href="servicios.html"><i class="fas fa-hand-sparkles"></i> Servicios</a></li>
-                    <li><a href="contactos.html"><i class="fas fa-envelope"></i> Contactanos</a></li>
-                </div>
-                <li>
-                    <a class="hide-user"><i class="fas fa-user-friends"></i> <i class="fas fa-angle-down"></i></a>
-                    <ul class="registros">
-                        <li class="registro-usu log-in"><a>Iniciar Sesion</a></li>
-                        <li class="registro-usu sign-in"><a>Registrarse</a></li>
-                    </ul>
-                </li>
-
-            </ul>
-        </nav>
-
-        <div class="header-inicio__titulo">
-            <h1>CONTACTANOS</h1>
-        </div>
-    </header>
-
-    <main class="main-contact">
-        <div class="div__img--efect-position">
-            <div class="img__behind">
-                <img src="img/img__atras.jpg" alt="">
-            </div>
-
-            <div class="img__medium">
-                <img src="img/img__medio.jpg" alt="">
-            </div>
-
-            <div class="img__above">
-                <img src="img/img__superior.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="form">
-            <form action="">
-                <div class="name">
-                    <label for="">Nombre: </label>
-                    <input type="text">
-                </div>
-
-                <div class="phone">
-                    <label for="">Telefono: </label>
-                    <input type="number">
-                </div>
-
-                <div class="email">
-                    <label for="">Correo: </label>
-                    <input type="email">
-                </div>
-
-                <div class="message">
-                    <label for="">Mensaje: </label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary">ENVIAR</button>
-            </form>
-        </div>
-
-    </main>
-
-    <footer>
+<footer>
         <div class="footer__map">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d956.3949439597732!2d-68.13472302080346!3d-16.496802549288617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m5!1s0x915f214e73de7279%3A0xf45e635602dfb0c5!2sOvio%20Jeans%20La%20Paz%2C%20Galeria%20Carvajal%2C%20Calle%20Potosi%20%C2%B71156%2C%20La%20Paz!3m2!1d-16.4968884!2d-68.1341458!4m3!3m2!1d-16.496785499999998!2d-68.1343!5e0!3m2!1ses!2sbo!4v1600635154708!5m2!1ses!2sbo"
@@ -126,7 +36,7 @@
         <div class="rights">
             <strong>Todos los derechos reservados <a href="#">PhawrikaUñas</a> &copy;</strong>
         </div>
-    </footer> 
+    </footer>
 
     <div class="view__register hide">
         <div class="overlay"></div>
@@ -198,11 +108,7 @@
         </form>
     </div>
 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/menu_bar.js"></script>
-    <script src="js/efectos.js"></script>
-
-</body>
-
-</html>
+    <script src="js/jquery-3.5.1.min.js?v=<?php echo(rand()); ?>"></script>
+    <script src="js/jquery-ui.js?v=<?php echo(rand()); ?>"></script>
+    <script src="js/menu_bar.js?v=<?php echo(rand()); ?>"></script>
+    <script src="js/efectos.js?v=<?php echo(rand()); ?>"></script>
