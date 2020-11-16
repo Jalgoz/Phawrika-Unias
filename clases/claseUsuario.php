@@ -127,22 +127,23 @@
 
         public static function eliminar($id)
         {
-            $con=Conexion::conectar();
+            $con=conexion::conectar();
             $sql="DELETE FROM usuarios WHERE id_usuario=:id";
             $query=$con->prepare($sql);
             $query->bindParam(":id",$id);
             //var_dump($query->errorInfo());
             return $query->execute();
         }
-        /* static public function seleccionarUsuarioEmail($email)
+        static public function seleccionarUsuario($usuario)
 		{
-			$pdo = Conexion::conectar();
-			$sql='SELECT * FROM usuarios WHERE usuario = :email';
+            $pdo = conexion::conectar();
+            var_dump($usuario);
+			$sql='SELECT * FROM usuarios WHERE usuario = :usuario';
 			$query = $pdo->prepare($sql);	
-			$query->bindParam(':email',$email); 
+			$query->bindParam(':usuario',$usuario); 
 			$query->execute();
-            $query->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,'usuarios',array('usuario','nombre','pass','correo','privilegio','genero',1));
+            $query->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,'usuarios',array('nombre','usuario','edad','pass','correo','genero','privilegio',1));
  			return $query->fetch();			
-		} */
+		}
     }   
 ?>

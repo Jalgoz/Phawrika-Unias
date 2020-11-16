@@ -97,7 +97,7 @@
     <div class="view__log-in hide">
         <div class="overlay"></div>
 
-        <form action="">
+        <form action="acciones/validar.php" method="post" id="frmLogIn">
             <div class="view__register-title">
                 <h3><span class="span-primero">INICIAR</span><span class="span-segundo"> SESION</span></h3>
             </div>
@@ -109,7 +109,7 @@
 
             <div class="view__register-field--placeholder">
                 <p><i class="fas fa-key"></i> Contraseña</p>
-                <input class="input" type="current-password" name="clave" id="clave">
+                <input class="input" type="password" name="clave" id="clave">
             </div>
 
             <div class="botones">

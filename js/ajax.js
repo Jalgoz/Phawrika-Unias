@@ -1,20 +1,22 @@
 $(() => {
+    // AJAX registro
     $('#frmInsertar').submit( function (e) {
         if($('#clave').val() === $('#clave2').val()) {
             e.preventDefault();
             $.ajax('acciones/accionesUsuarios.php', {
-            data: $(this).serialize(),
-            success: function (data) {
-                if (data == 'Error'){
-                    $('#usuario').val('');
-                    alert('Usuario existente');
-                }else {
-                    $('#frmInsertar')[0].reset();
-                    $('#frmInsertar').parent().addClass('hide',200);;
-                    alert('Usuario registrado satisfactoriamente');
-                }   
-            }
-        });
+                data: $(this).serialize(),
+                success: function (data) {
+                    console.log(data);
+                    if (data == 'ERROR'){
+                        $('#usuario').val('');
+                        alert('Usuario existente');
+                    }else {
+                        $('#frmInsertar')[0].reset();
+                        $('#frmInsertar').parent().addClass('hide',200);;
+                        alert('Usuario registrado satisfactoriamente');
+                    }   
+                }
+            });
         } else {
             e.preventDefault();
             alert('Las contraseñas no coinciden !!!')
@@ -22,4 +24,31 @@ $(() => {
             $('#clave2').val('');
         }
     });
+
+    //AJAX log in
+   $('#frmLogIn').submit( function (e) {
+        if($('#frmLogIn #usuario').val().length <= 0 || $('#frmLogIn #clave').val().length <= 0) {
+           e.preventDefault();
+           alert('Llene todos los campos por favor');
+        } else {
+            e.preventDefault();
+            $.ajax('acciones/validar.php', {
+                data: $(this).serialize(),
+                success: function (data) {
+                    console.log(data);
+                    let d = data;
+                    if (d.includes('PASS')){
+                        alert('Contraseña incorrecta');
+                        $('#frmLogIn #clave').val('');
+                    } else if (d.includes('USUARIO')) {
+                        alert('Usuario incorrecta');
+                        $('#frmLogIn #usuario').val('');
+                    } else if (d.includes('OK')) {
+                        $('#frmLogIn')[0].reset();
+                        $('#frmLogIn').parent().addClass('hide',200);
+                    }
+                }
+            });
+        }
+    }); 
 });
