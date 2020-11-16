@@ -41,42 +41,53 @@
     <div class="view__register hide">
         <div class="overlay"></div>
 
-        <form action="">
+        <form action="acciones/accionesUsuarios.php" method="post" id="frmInsertar">
             <div class="view__register-title">
                 <h3><span class="span-primero">REGISTRO</span><span class="span-segundo"> USUARIO</span></h3>
             </div>
 
             <div class="view__register-field--placeholder">
-                <p><i class="fas fa-font"></i> Nombre</p>
-                <input type="text" class="input" name="nombre" id="nombre">
-            </div>
-
-            <div class="view__register-field--placeholder">
-                <p><i class="fab fa-black-tie"></i> Apellidos</p>
-                <input type="text" class="input" name="apellido" id="apellido">
+                <p><i class="fas fa-font"></i> Nombre Completo</p>
+                <input type="text" class="input" name="nombre" id="nombre" maxlength="30" minlength="2" required >
             </div>
 
             <div class="view__register-field--placeholder">
                 <p><i class="fas fa-user"></i> Usuario</p>
-                <input type="text" class="input" name="usuario" id="usuario">
+                <input type="text" class="input" name="usuario" id="usuario" maxlength="20" minlength="4" required>
             </div>
 
             <div class="view__register-field--placeholder-date">
                 <p><i class="far fa-calendar-alt"></i> Fecha nacimiento</p>
-                <input type="date" id="fecha" name="fecha" value="1995-01-01" min="1920-01-01" max="2015-01-01">
+                <input type="date" id="edad" name="edad" value="1995-01-01" min="1920-01-01" max="2015-01-01" required>
+            </div>
+
+            <div class="view__register-field--placeholder-gender">
+                <p><i class="fas fa-venus-mars"></i> Genero</p>
+                <select name="genero" id="genero">
+                    <option value="M" selected>Mujer</option>
+                    <option value="H">Hombre</option>
+                    <option value="O">Otro</option>
+                </select>
             </div>
 
             <div class="view__register-field--placeholder">
                 <p><i class="far fa-envelope"></i> Correo</p>
-                <input class="input" type="email" name="correo" id="correo">
+                <input class="input" type="email" name="correo" id="correo" maxlength="50" required>
             </div>
 
             <div class="view__register-field--placeholder">
                 <p><i class="fas fa-key"></i> Contraseña</p>
-                <input class="input" type="current-password" name="clave" id="clave">
+                <input class="input" type="password" name="clave" maxlength="25" minlength="8" id="clave" required>
+            </div>
+
+            <div class="view__register-field--placeholder">
+                <p><i class="fas fa-key"></i> Verificar Contraseña</p>
+                <input class="input" type="password" name="clave2" id="clave2" maxlength="25" minlength="8" required>
             </div>
 
             <div class="botones">
+                <input type="hidden" value="insertar" name="opcion" />
+                <input type="hidden" value="3" name="privilegio" />
                 <a class="btnCerrar">Cerrar <i class="far fa-window-close"></i></a>
                 <button type="submit" class="btnEnviar">Registrar <i class="fas fa-sign-in-alt"></i></button>
             </div>
@@ -112,3 +123,4 @@
     <script src="js/jquery-ui.js?v=<?php echo(rand()); ?>"></script>
     <script src="js/menu_bar.js?v=<?php echo(rand()); ?>"></script>
     <script src="js/efectos.js?v=<?php echo(rand()); ?>"></script>
+    <script src="js/ajax.js?v=<?php echo(rand()); ?>"></script>

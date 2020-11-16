@@ -29,6 +29,7 @@ $( () => {
 
     $('.sign-in').click( () => {
         $('.view__register').removeClass('hide',200);
+
     });
 
     $('.log-in').click( () => {

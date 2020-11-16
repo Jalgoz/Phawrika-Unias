@@ -9,6 +9,7 @@
     height: 100vh;
     @include utilities.display-flex-row(1);
     transition: all 300ms;
+    z-index: 500;
 
     form {
         z-index: 201;
@@ -26,10 +27,12 @@
             border-bottom: 3px solid utilities.$color_gris;
             padding-left: 5px;
             transition: all 300ms;
+
+            &:focus {
+                border-bottom: 3px solid utilities.$color_celeste;
+            }
         }
-        input:focus {
-            border-bottom: 3px solid utilities.$color_celeste;
-        }
+        
         .view__register-field--placeholder {
             margin-bottom: 25px;
             position: relative;
@@ -44,7 +47,7 @@
             }
 
             &:hover p{
-                top: -19px;
+                top: -19px !important;
             }
         }
         .view__register-field--placeholder-date {
@@ -79,6 +82,27 @@
 
     .span-segundo {
         color: utilities.$color_celeste;
+    }
+}
+
+.view__register-field--placeholder-gender {
+    select {
+        width: 250px;
+        margin-bottom: 25px;
+        height: 25px;
+        border: none;
+        border-bottom: 3px solid utilities.$color_gris;
+        transition: all 300ms;
+
+        &:focus {
+            border-bottom: 3px solid utilities.$color_celeste;
+        }
+    }
+
+    p {
+        font-family: utilities.$parrafo;
+        margin-left: 5px;
+        opacity: 0.5;
     }
 }
 
@@ -122,5 +146,13 @@
 
     a {
         order: 1;
+    }
+}
+
+.view__register-field--placeholder-gender, 
+.view__register-field--placeholder-date,
+.view__register-field--placeholder {
+    i {
+        color: utilities.$color_celeste !important;
     }
 }

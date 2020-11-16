@@ -468,8 +468,17 @@
     .view__register form {
         padding: map-get($map: utilities.$pad, $key: 'L') !important;
         padding-top: 0 !important;
-        input {
+        input, select {
             width: 200px !important;
+        }
+    }
+
+    .botones {
+        @include utilities.display-flex-column(1);
+
+        button {
+            order: -1;
+            margin-bottom: 10px;
         }
     }
     

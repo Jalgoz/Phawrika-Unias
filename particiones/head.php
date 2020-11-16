@@ -22,7 +22,7 @@
         <nav class="header-inicio__menu">
             <ul>
                 <li class="hashtag"><a href="#">#PhawrikaDeUñas</a></li>
-                <li><a href="inicio.html"><img src="img/icon.png" alt="icono"></a></li>
+                <li><a href="inicio.php"><img src="img/icon.png" alt="icono"></a></li>
                 <div class="menu-opciones">
                     <li><a href="nosotros.php"><i class="fas fa-users"></i> Quiénes Somos</a></li>
                     <li><a href="productos.php"><i class="fas fa-boxes"></i> Productos</a></li>
