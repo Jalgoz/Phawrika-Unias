@@ -1,5 +1,5 @@
 <?php
-    include_once("../conexionDB/conexion.php");
+    include_once("conexionDB/conexion.php");
     class usuarios{
         private $id_usuario;
         private $nombre;
@@ -74,8 +74,7 @@
             $this->privilegio = $var;
         }
 
-        public function insercion()
-        {         
+        public function insercion(){         
             $con=conexion::conectar();         
             $sql="INSERT INTO usuarios(nombre,usuario,edad,pass,correo,genero,privilegio) VALUES(:c1,:c2,:c3,:c4,:c5,:c6,:c7)";
             $query=$con->prepare($sql);
@@ -90,8 +89,7 @@
             return $query->execute();
         }
 
-        public static function seleccionarTodo()
-        {
+        public static function seleccionarTodo(){
             $con=conexion::conectar();
             $sql="SELECT * FROM usuarios";
             $query=$con->prepare($sql);

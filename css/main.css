@@ -1441,6 +1441,15 @@ hr {
   overflow: hidden;
 }
 
+/*----------------------***** LISTS ***** ----------------------*/
+.main__table {
+  margin-top: 100px;
+}
+
+.table-list {
+  margin: auto auto;
+}
+
 /*----------------------***** FOOTER ***** ----------------------*/
 footer {
   margin-top: 2em;

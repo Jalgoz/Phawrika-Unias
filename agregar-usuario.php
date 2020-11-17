@@ -1,4 +1,5 @@
 <?php include_once("particiones/head_perfil.php"); ?>
+<?php include_once("particiones/head_perfil2.php"); ?>
 
     <div class="perfil__agregar-usuario form__especial">
 
