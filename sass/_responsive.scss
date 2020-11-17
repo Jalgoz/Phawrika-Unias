@@ -187,6 +187,31 @@
     .div__servicio__box .div__servicio__img div p {
         padding: 1em;
     }
+    .nav__perfil {
+        padding: 20px;
+        height: auto;
+        .bar {
+            display: block;
+        }
+
+        & > ul {
+            margin-top: 20px;
+            order: 1;
+            // display: none;
+
+            li {
+                margin-bottom: 30px;
+                text-align: center;
+                position: relative;
+
+                ul {
+                    width: 100%;
+                    z-index: 10;
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
 
     footer .footer__map {
         width: 100%;
@@ -373,6 +398,26 @@
         flex-basis: 45%;
     }
 
+    .bienvenida {
+    
+        img {
+            height: 75px;
+            width: 75px;
+        }
+    
+        h2 {
+            font-size: map-get($map: utilities.$tamanio-fuente, $key: 'M');
+        }
+    
+        strong {
+            font-size: map-get($map: utilities.$tamanio-fuente, $key: 'XS');
+        }
+    
+        p {
+            font-size: map-get($map: utilities.$tamanio-fuente, $key: 'XXS');
+        }
+    }
+
     footer {
         grid-template-columns: 1fr 1fr;
     }
@@ -487,6 +532,13 @@
         flex-basis: 100%;
     }
 
+    .nav__perfil {
+        overflow: scroll;
+    }
+    .nav__perfil .bar {
+        flex-basis: 25%;
+    }
+
     footer {
         grid-template-columns: 1fr;
         margin-top: 1em;
@@ -516,6 +568,10 @@
     }
     .blue {
         left: 77vw !important;
+    }
+    .nav__perfil .bar {
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 5%;
     }
 }
 

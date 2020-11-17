@@ -1814,6 +1814,170 @@ footer .rights strong a:hover {
   text-decoration: underline;
 }
 
+.nav__perfil {
+  width: 100%;
+  height: auto;
+  padding: 30px 0;
+  background-color: #393e46;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.nav__perfil .bar {
+  font-size: 1.7em;
+  color: white;
+  display: none;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  text-align: center;
+}
+.nav__perfil ul {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.nav__perfil ul li {
+  list-style: none;
+}
+.nav__perfil ul li:hover ul {
+  display: block;
+}
+.nav__perfil ul li:hover {
+  background-color: #222831;
+}
+.nav__perfil ul ul {
+  display: none;
+  position: absolute;
+  background-color: #222831;
+}
+.nav__perfil ul ul li {
+  padding: 10px;
+  list-style: none;
+}
+.nav__perfil ul ul li a {
+  text-decoration: none;
+  color: white;
+}
+.nav__perfil ul ul li:hover a {
+  text-decoration: underline;
+  color: #00adb5;
+}
+.nav__perfil ul a {
+  font-size: 1.25em;
+  font-family: "Orbitron";
+  color: #00adb5;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.ul__problema {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-pack: distribute !important;
+      justify-content: space-around !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.options {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.options a {
+  color: white;
+  text-decoration: none;
+  font-family: "Orbitron";
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+.options a:hover {
+  color: #00adb5;
+  text-decoration: underline;
+}
+.options .back {
+  padding-right: 4px;
+  margin-right: 4px;
+  border-right: 2px solid #00adb5;
+}
+
+.bienvenida {
+  width: 100%;
+  text-align: center;
+  height: 95vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bienvenida img {
+  height: 100px;
+  width: 100px;
+}
+.bienvenida h2 {
+  margin-top: 20px;
+  font-family: "Josefin";
+  font-size: 3em;
+}
+.bienvenida strong {
+  text-transform: uppercase;
+  font-family: "Josefin";
+  color: #00adb5;
+  font-size: 1em;
+}
+.bienvenida p {
+  margin-top: 20px;
+  font-family: "Josefin";
+  font-size: 1em;
+}
+
 /*----------------------***** RESPONSIVE ***** ----------------------*/
 @media (max-width: 1200px) {
   .active {
@@ -2035,6 +2199,30 @@ footer .rights strong a:hover {
     padding: 1em;
   }
 
+  .nav__perfil {
+    padding: 20px;
+    height: auto;
+  }
+  .nav__perfil .bar {
+    display: block;
+  }
+  .nav__perfil > ul {
+    margin-top: 20px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .nav__perfil > ul li {
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+  }
+  .nav__perfil > ul li ul {
+    width: 100%;
+    z-index: 10;
+    padding-top: 15px;
+  }
+
   footer .footer__map {
     width: 100%;
   }
@@ -2222,6 +2410,20 @@ footer .rights strong a:hover {
         flex-basis: 45%;
   }
 
+  .bienvenida img {
+    height: 75px;
+    width: 75px;
+  }
+  .bienvenida h2 {
+    font-size: 1.7em;
+  }
+  .bienvenida strong {
+    font-size: 1em;
+  }
+  .bienvenida p {
+    font-size: 0.8em;
+  }
+
   footer {
     grid-template-columns: 1fr 1fr;
   }
@@ -2339,6 +2541,15 @@ footer .rights strong a:hover {
         flex-basis: 100%;
   }
 
+  .nav__perfil {
+    overflow: scroll;
+  }
+
+  .nav__perfil .bar {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+
   footer {
     grid-template-columns: 1fr;
     margin-top: 1em;
@@ -2381,6 +2592,11 @@ footer .rights strong a:hover {
 
   .blue {
     left: 77vw !important;
+  }
+
+  .nav__perfil .bar {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 5%;
   }
 }
 /*# sourceMappingURL=main.css.map */

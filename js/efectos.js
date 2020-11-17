@@ -61,4 +61,9 @@ $( () => {
     $('.log-in').click( () => {
         $('.view__log-in').removeClass('hide',200);
     });
+
+    //Efecto menu pagina perfil
+    $('.bar').click( function () {
+        $(this).siblings('ul').toggleClass('active', 200);
+    });
 });

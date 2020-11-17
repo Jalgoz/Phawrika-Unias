@@ -21,7 +21,7 @@
             <a>&#9776;</a>
         </div>
 
-        <nav class="header-inicio__menu">
+        <nav class="header-inicio__menu nav">
             <ul>
                 <li class="hashtag"><a href="#">#PhawrikaDeUñas</a></li>
                 <li class="li__icon"><a href="inicio.php"><img src="img/icon.png" alt="icono"></a></li>

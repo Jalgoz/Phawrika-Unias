@@ -5,7 +5,7 @@
     $arr = usuarios::seleccionarUsuario($usuario);
     // echo $usuario;
     // echo $pass;
-    // var_dump($arr);
+    var_dump($arr);
     if ($arr != false) {
         /*var_dump($_POST['logUsuario']);
         var_dump($_POST['logPassword']);*/
