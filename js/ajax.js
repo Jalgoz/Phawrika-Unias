@@ -12,7 +12,7 @@ $(() => {
                         alert('Usuario existente');
                     }else {
                         $('#frmInsertar')[0].reset();
-                        $('#frmInsertar').parent().addClass('hide',200);;
+                        $('.view__register #frmInsertar').parent().addClass('hide',200);
                         alert('Usuario registrado satisfactoriamente');
                     }   
                 }

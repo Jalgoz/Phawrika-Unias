@@ -5,46 +5,24 @@ $( () => {
     let logIn = true;
 
     // Efectos formulario registro
-    $('.view__register input').focusout( function() {
+    $('.form__especial input').focusout( function() {
         if($(this).val().length <= 0 && singIn ) {
             $(this).siblings('p').animate({top:'2px'},400);
         } 
     }); 
-    $('.view__register input').focus( function() {
+    $('.form__especial input').focus( function() {
         $(this).siblings('p').animate({top:'-19px'},400);
         singIn = true;
     }); 
 
 
-    $('.view__register input').change( function () {   
+    $('.form__especial input').change( function () {   
         if($(this).val().length <= 0) {
             $(this).siblings('p').animate({top:'2px'},400);
             singIn = false;
         } else {
             $(this).siblings('p').animate({top:'-19px'},400);
             singIn = true;
-        } 
-    });
-
-    //Efectos formulario log in
-    $('.view__log-in input').focusout( function() {
-        if($(this).val().length <= 0 && logIn ) {
-            $(this).siblings('p').animate({top:'2px'},400);
-        } 
-    }); 
-    $('.view__log-in input').focus( function() {
-        $(this).siblings('p').animate({top:'-19px'},400);
-        logIn = true;
-    }); 
-
-
-    $('.view__log-in input').change( function () {   
-        if($(this).val().length <= 0) {
-            $(this).siblings('p').animate({top:'2px'},400);
-            logIn = false;
-        } else {
-            $(this).siblings('p').animate({top:'-19px'},400);
-            logIn = true;
         } 
     });
 

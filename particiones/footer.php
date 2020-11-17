@@ -38,7 +38,7 @@
         </div>
     </footer>
 
-    <div class="view__register hide">
+    <div class="view__register hide form__especial">
         <div class="overlay"></div>
 
         <form action="acciones/accionesUsuarios.php" method="post" id="frmInsertar">
@@ -94,7 +94,7 @@
         </form>
     </div>
 
-    <div class="view__log-in hide">
+    <div class="view__log-in hide form__especial">
         <div class="overlay"></div>
 
         <form action="acciones/validar.php" method="post" id="frmLogIn">
