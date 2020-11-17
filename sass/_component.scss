@@ -29,6 +29,7 @@
         text-decoration: none;
         color: white;
         font-size: map-get( $map: utilities.$tamanio-fuente, $key: 'XS' );
+        font-family: utilities.$fuente_menu;
     }
 
     .hashtag {

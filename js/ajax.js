@@ -27,7 +27,7 @@ $(() => {
 
     //AJAX log in
    $('#frmLogIn').submit( function (e) {
-        if($('#frmLogIn #usuario').val().length <= 0 || $('#frmLogIn #clave').val().length <= 0) {
+        if($('#frmLogIn #logUsuario').val().length <= 0 || $('#frmLogIn #logClave').val().length <= 0) {
            e.preventDefault();
            alert('Llene todos los campos por favor');
         } else {
@@ -39,13 +39,14 @@ $(() => {
                     let d = data;
                     if (d.includes('PASS')){
                         alert('Contraseña incorrecta');
-                        $('#frmLogIn #clave').val('');
+                        $('#frmLogIn #logClave').val('');
                     } else if (d.includes('USUARIO')) {
                         alert('Usuario incorrecta');
-                        $('#frmLogIn #usuario').val('');
+                        $('#frmLogIn #logUsuario').val('');
                     } else if (d.includes('OK')) {
                         $('#frmLogIn')[0].reset();
                         $('#frmLogIn').parent().addClass('hide',200);
+                        location.reload();
                     }
                 }
             });

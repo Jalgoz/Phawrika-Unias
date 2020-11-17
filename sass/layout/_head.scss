@@ -37,7 +37,6 @@
                 color: white;
                 text-decoration: none;
                 font-family: utilities.$fuente_menu;
-                text-transform: uppercase;
                 font-size: map-get($map: utilities.$tamanio-fuente, $key: 'XXS');
                 letter-spacing: 1.5px;
                 opacity: 1; 

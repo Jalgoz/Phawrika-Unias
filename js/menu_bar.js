@@ -16,10 +16,14 @@ $( () => {
         if(x.matches) {
             $('nav').addClass('nav_bar').removeClass('header-inicio__menu');
             $('.target').removeClass('hide');
+            $('.li__inicio').removeClass('hide');
+            $('.li__icon').addClass('hide');
         }
         else {
             $('nav').addClass('header-inicio__menu').removeClass('nav_bar').removeClass('expansion');
             $('.target').addClass('hide').removeClass('blue');
+            $('.li__inicio').addClass('hide');
+            $('.li__icon').removeClass('hide');
             flag = true;        
         }     
     }

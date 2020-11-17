@@ -104,12 +104,12 @@
 
             <div class="view__register-field--placeholder">
                 <p><i class="fas fa-user"></i> Usuario</p>
-                <input type="text" class="input" name="usuario" id="usuario">
+                <input type="text" class="input" name="logUsuario" id="logUsuario">
             </div>
 
             <div class="view__register-field--placeholder">
                 <p><i class="fas fa-key"></i> Contraseña</p>
-                <input class="input" type="password" name="clave" id="clave">
+                <input class="input" type="password" name="logClave" id="logClave">
             </div>
 
             <div class="botones">

@@ -1,10 +1,10 @@
 <?php
-    include("../clases/claseUsuario.php");
-    $usuario = $_REQUEST['usuario'];
-    $pass = $_REQUEST['clave'];
+    include_once("../clases/claseUsuario.php");
+    $usuario = $_REQUEST['logUsuario'];
+    $pass = $_REQUEST['logClave'];
     $arr = usuarios::seleccionarUsuario($usuario);
-    echo $usuario;
-    echo $pass;
+    // echo $usuario;
+    // echo $pass;
     // var_dump($arr);
     if ($arr != false) {
         /*var_dump($_POST['logUsuario']);
