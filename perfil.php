@@ -1,5 +1,7 @@
 
-    <?php include_once("particiones/head_perfil.php"); ?>
+<?php include_once("particiones/head_perfil.php"); ?>
+
+    <?php include_once("particiones/head_perfil2.php"); ?>
 
     <div class="bienvenida">
         <img src="img/icon.png" alt="">

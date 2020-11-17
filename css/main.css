@@ -1448,6 +1448,38 @@ hr {
 
 .table-list {
   margin: auto auto;
+  background-color: #777;
+}
+.table-list thead {
+  background-color: #00adb5;
+}
+.table-list thead th {
+  color: white;
+}
+.table-list td, .table-list th {
+  padding: 1.25em;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 2px black inset;
+          box-shadow: 0px 0px 2px black inset;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8em;
+}
+.table-list tbody {
+  background-color: #eeeeee;
+}
+
+.accionBtn i {
+  color: #00adb5;
+  font-size: 1.25em;
+  padding: 0 10px;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+.accionBtn .fa-edit:hover {
+  color: green;
+}
+.accionBtn .fa-trash:hover {
+  color: red;
 }
 
 /*----------------------***** FOOTER ***** ----------------------*/
@@ -2458,6 +2490,18 @@ footer .rights strong a:hover {
     font-size: 0.8em;
   }
 
+  .table-list .td-genero, .table-list .td-usuario {
+    display: none;
+  }
+  .table-list td, .table-list th {
+    padding: 0.625em;
+  }
+
+  .accionBtn i {
+    font-size: 1.7em;
+    padding: 0 5px;
+  }
+
   footer {
     grid-template-columns: 1fr 1fr;
   }
@@ -2584,6 +2628,12 @@ footer .rights strong a:hover {
         flex-basis: 25%;
   }
 
+  .table-list td, .table-list th {
+    padding: 0.4em;
+    max-width: 100px;
+    overflow: scroll;
+  }
+
   footer {
     grid-template-columns: 1fr;
     margin-top: 1em;
@@ -2631,6 +2681,10 @@ footer .rights strong a:hover {
   .nav__perfil .bar {
     -ms-flex-preferred-size: 25%;
     flex-basis: 5%;
+  }
+
+  .table-list td, .table-list th {
+    padding: 2px;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -3,7 +3,7 @@ $(() => {
     $('#frmInsertar').submit( function (e) {
         if($('#clave').val() === $('#clave2').val()) {
             e.preventDefault();
-            $.ajax('acciones/accionesUsuarios.php', {
+            $.ajax('accionesUsuarios.php', {
                 data: $(this).serialize(),
                 success: function (data) {
                     console.log(data);
@@ -32,7 +32,7 @@ $(() => {
            alert('Llene todos los campos por favor');
         } else {
             e.preventDefault();
-            $.ajax('acciones/validar.php', {
+            $.ajax('validar.php', {
                 data: $(this).serialize(),
                 success: function (data) {
                     console.log(data);
