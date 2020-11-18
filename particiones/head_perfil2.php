@@ -23,6 +23,6 @@
 
         <div class="options">
             <div class="back"><a href="inicio.php">Volver</a></div>
-            <div class="close"><a href="acciones/logoff.php">Cerrar sesion</a></div>
+            <div class="close"><a href="logoff.php">Cerrar sesion</a></div>
         </div>
     </nav>

@@ -220,7 +220,7 @@
                     <div class="producto__detalle">
                         <p>Precio: 100Bs.</p>
                         <p>Marca: Sony</p>
-                        <p>Color: Rosado</p>
+                        <p>Informacion: Ros sdfsfsfsfsdsfsdfsdfdsfado</p>
                     </div>
                 </div>
 

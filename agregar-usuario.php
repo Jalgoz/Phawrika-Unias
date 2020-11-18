@@ -3,7 +3,7 @@
 
     <div class="perfil__agregar-usuario form__especial">
 
-        <form action="acciones/accionesUsuarios.php" method="post" id="frmInsertar">
+        <form action="accionesUsuarios.php" method="post" id="frmInsertar" class="insertar__usuario">
             <div class="view__register-title">
                 <h3><span class="span-primero">REGISTRO</span><span class="span-segundo"> USUARIO</span></h3>
             </div>
@@ -64,5 +64,6 @@
     </div>
     
 <?php include_once("particiones/footer_perfil.php"); ?>
+
 </body>
 </html>

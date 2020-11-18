@@ -36,10 +36,10 @@
                     </td>           
                     
                     <td class="accionBtn">
-                        <a name="id" class="btn btn-info" href="modificarCelular.php?id=<?=$usuario->getId()?>" role="button"
+                        <a name="id" class="btn btn-info" href="modificar-usuario.php?id=<?=$usuario->getId()?>" role="button"
                             title="Editar"><i class="fas fa-edit"></i></a>
                         <input type="hidden" name="op" value="eliminar">
-                        <a name="id" class="btn btn-danger" href="accionesUsuarios.php?id=<?=$usuario->getId()?>" role="button"
+                        <a name="id" class="btn btn-danger" onclick="return confirmar('Desea eliminar al usuario')" href="accionesUsuarios.php?id=<?=$usuario->getId()?>" role="button"
                         title="Eliminar"><i class="fas fa-trash"></i></a>
                     </td>
 
@@ -49,6 +49,6 @@
       </table>  
     </main>
     
-<?php include_once("particiones/footer_perfil.php"); ?>
+    <?php include_once("particiones/footer_perfil.php"); ?>
 </body>
 </html>

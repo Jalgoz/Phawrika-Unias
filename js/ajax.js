@@ -6,7 +6,7 @@ $(() => {
             $.ajax('accionesUsuarios.php', {
                 data: $(this).serialize(),
                 success: function (data) {
-                    console.log(data);
+                    // console.log(data);
                     if (data == 'ERROR'){
                         $('#usuario').val('');
                         alert('Usuario existente');
@@ -52,4 +52,22 @@ $(() => {
             });
         }
     }); 
+
+    // AJAX Modificar
+    $('#frmModificar').submit( function (e) {
+        e.preventDefault();
+        $.ajax('accionesUsuarios.php', {
+            data: $(this).serialize(),
+            success: function (data) {
+                if (data == 'ERROR'){
+                    $('#usuario').val('');
+                    alert('Usuario existente');
+                }else {
+                    alert('Usuario modificado satisfactoriamente');
+                    location.reload();
+                    $(location).attr('href','lista-usuarios.php');
+                }   
+            }
+        });
+    });
 });

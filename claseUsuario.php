@@ -113,12 +113,13 @@
         {
             $con=conexion::conectar();
             var_dump($this->id);
-            $sql="UPDATE usuarios SET nombre=:c1,usuario=:c3,edad=:c4,genero=:c5 WHERE id_usuario=:id";
+            $sql="UPDATE usuarios SET nombre=:c1,usuario=:c2,edad=:c3,genero=:c4,privilegio=:c5 WHERE id_usuario=:id";
             $query=$con->prepare($sql);
             $query->bindParam(":c1",$this->nombre);
             $query->bindParam(":c2",$this->usuario);
             $query->bindParam(":c3",$this->edad);
             $query->bindParam(":c4",$this->genero);
+            $query->bindParam(":c5",$this->privilegio);
             $query->bindParam(":id",$this->id_usuario);
             return $query->execute();
         }

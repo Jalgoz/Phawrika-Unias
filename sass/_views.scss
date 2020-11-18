@@ -2,18 +2,22 @@
 
 /*----------------------***** VIEW ***** ----------------------*/
 
-.view__register, .view__log-in {
+.view__register, .view__log-in, .view__complete {
     position: fixed;
     top: 0;
     width: 100vw;
     height: 100vh;
     @include utilities.display-flex-row(1);
     transition: all 300ms;
-    z-index: 500;
+    z-index: 1500;
 }
 
-#frmInsertar, #frmLogIn {
-    z-index: 201;
+.insertar__usuario {
+    z-index: 500 !important;
+}
+
+#frmInsertar, #frmLogIn, #frmModificar {
+    z-index: 1300;
     padding: map-get($map: utilities.$pad, $key: 'XXL');
     padding-top: 0;
     padding-bottom: map-get($map: utilities.$pad, $key: 'L');
@@ -67,7 +71,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 200;
+    z-index: 1200;
     background-color: rgba($color: utilities.$color_gris, $alpha: 0.7);
 }
 

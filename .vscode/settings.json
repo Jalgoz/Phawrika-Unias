@@ -1,28 +1,3 @@
-// {
-//      "liveSassCompile.settings.formats":[
-//         {
-//             "format": "expanded",
-//             "extensionName": ".css",
-//             "savePath": "/css"
-//         },
-//         {
-//             "extensionName": ".min.css",
-//             "format": "compressed",
-//             "savePath": "/css-min"
-//         }
-//     ],
-//     "liveSassCompile.settings.excludeList": [
-//        "**/node_modules/**",
-//        ".vscode/**"
-//     ],
-//     "liveSassCompile.settings.generateMap": true,
-//     "liveSassCompile.settings.autoprefix": [
-//         "> 1%",
-//         "last 2 versions"
-//     ],
-//     "liveServer.settings.port": 5501
-// }
-
 {
     "dartsass.targetDirectory": "./css",
     "liveServer.settings.port": 5502

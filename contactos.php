@@ -11,7 +11,6 @@
             <div class="img__behind">
                 <img src="img/img__atras.jpg" alt="">
             </div>
-
             <div class="img__medium">
                 <img src="img/img__medio.jpg" alt="">
             </div>

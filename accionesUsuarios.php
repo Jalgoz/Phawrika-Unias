@@ -26,12 +26,15 @@
             $c1 = $_REQUEST['nombre'];
             $c2 = $_REQUEST['usuario'];
             $c3 = $_REQUEST['edad'];
+            $c4 = $_REQUEST['clave'];
+            $c5 = $_REQUEST['correo'];
             $c6 = $_REQUEST['genero'];
+            $c7 = $_REQUEST['privilegio'];
             $id = $_REQUEST['id'];
-            $usuario = new usuarios($c1,$c2,$c3,null,null,$c6,null,$id);
+            $usuario = new usuarios($c1,$c2,$c3,$c4,$c5,$c6,$c7,$id);
             if($usuario->modificar()){
                 echo 'OK';
-                header('Location: listaUsuario.php');    
+                header('Location: lista-usuarios.php');    
             }else{
                 echo 'ERROR';
             }
