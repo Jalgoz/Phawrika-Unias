@@ -296,7 +296,7 @@
     }
 
     .main h2 {
-        font-size: 30px;
+        font-size: map-get($map: utilities.$tamanio-fuente, $key: 'M');
         margin-bottom: 1em;
     }
 
@@ -384,6 +384,10 @@
     .div__productos .div__producto .div__carrito i, 
     .div__productos .div__producto .div__carrito a{
         opacity: 1;
+    }
+    .div__productos .div__producto .producto__info {
+        max-height: 110px;
+        min-height: 100px;
     }
 
     .div__servicio__box {

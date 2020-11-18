@@ -257,6 +257,9 @@
 .div__productos .div__producto .producto__info {
   margin: 0 auto;
   padding: 1em;
+  max-height: 170px;
+  min-height: 170px;
+  overflow: hidden;
 }
 .div__productos .div__producto .producto__info h2 {
   font-family: "Josefin";
@@ -268,6 +271,7 @@
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #eeeeee;
+  font-size: 0.8em;
   line-height: 1.7em;
 }
 .div__productos .div__producto .div__carrito {
@@ -2443,7 +2447,7 @@ footer .rights strong a:hover {
   }
 
   .main h2 {
-    font-size: 30px;
+    font-size: 1.7em;
     margin-bottom: 1em;
   }
 
@@ -2532,6 +2536,11 @@ footer .rights strong a:hover {
   .div__productos .div__producto .div__carrito i,
 .div__productos .div__producto .div__carrito a {
     opacity: 1;
+  }
+
+  .div__productos .div__producto .producto__info {
+    max-height: 110px;
+    min-height: 100px;
   }
 
   .div__servicio__box {

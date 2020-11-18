@@ -179,6 +179,9 @@
         .producto__info {
             margin: 0 auto;
             padding: map-get($map: utilities.$pad, $key: 'S');
+            max-height: 170px;
+            min-height: 170px;
+            overflow: hidden;
 
             h2 {
                 font-family: utilities.$fuente_titulo;
@@ -191,6 +194,7 @@
                 text-align: center;
                 font-family: utilities.$parrafo;
                 color: utilities.$color_claro;
+                font-size: map-get($map: utilities.$tamanio-fuente, $key: 'XXS');
                 line-height: map-get($map: utilities.$interlineado, $key: 'recomendado');
             }
         }

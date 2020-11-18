@@ -30,244 +30,30 @@
             <div class="div__producto">
 
                 <div class="div__producto__img">
-                    <img src="img/productos-1.jpg" alt="producto">
+                    <img src="<?=$productos->getImagen()?>" alt="producto">
 
                     <div class="producto__detalle">
-                        <p>Precio: <?=$productos->getPrecio()?>.</p>
-                        <p>Marca: Sony</p>
-                        <p>Color: Rosado</p>
+                        <p style="<?php if($productos->getRebaja() == 1) echo 'text-decoration: line-through;'?>" >Precio: <?=$productos->getPrecio()?> Bs.</p>
+                        <p>Marca: <?=$productos->getMarca()?></p>
+                        <!-- <p>Color: Rosado</p> -->
+                        <?php if($productos->getRebaja() == 1) { ?>
+                            <p>En oferta: <?=$productos->getNuevoPrecio()?> Bs.</p>
+                        <?php }  ?>
                     </div>
                 </div>
 
                 <div class="producto__info">
-                    <h2>Esmalte Rosado</h2>
+                    <h2><?=$productos->getNombre()?></h2>
 
-                    <p>Tenetur vel enim veritatis distinctio, repudiandae sit praesentium asperiores sequi quos deserunt
-                        quia nobis doloribus autem eos dicta.</p>
+                    <p><?=$productos->getInformacion()?></p>
                 </div>
 
                 <div class="div__carrito">
-                    <a href="#">Comprar</a> <i class="fas fa-shopping-cart"></i>
+                    <a href="<?php if(!isset($_SESSION['usuario'])){ echo 'inicio.php'; } ?>">Comprar</a> <i class="fas fa-shopping-cart"></i>
                 </div>
             </div>
 
             <?php }  ?>
-
-            <div class="div__producto">
-
-                <div class="div__producto__img">
-                    <img src="img/productos-6.jpg" alt="producto">
-
-                    <div class="producto__detalle">
-                        <p>Precio: 100Bs.</p>
-                        <p>Marca: Sony</p>
-                        <p>Color: Rosado</p>
-                    </div>
-                </div>
-
-                <div class="producto__info">
-                    <h2>Esmalte Rosado</h2>
-
-                    <p>Tenetur vel enim veritatis distinctio, repudiandae sit praesentium asperiores sequi quos deserunt
-                        quia nobis doloribus autem eos dicta.</p>
-                </div>
-
-                <div class="div__carrito">
-                    <a href="#">Comprar</a> <i class="fas fa-shopping-cart"></i>
-                </div>
-            </div>
-
-            <div class="div__producto">
-
-                <div class="div__producto__img">
-                    <img src="img/productos-7.jpg" alt="producto">
-
-                    <div class="producto__detalle">
-                        <p>Precio: 100Bs.</p>
-                        <p>Marca: Sony</p>
-                        <p>Color: Rosado</p>
-                    </div>
-                </div>
-
-                <div class="producto__info">
-                    <h2>Esmalte Rosado</h2>
-
-                    <p>Tenetur vel enim veritatis distinctio, repudiandae sit praesentium asperiores sequi quos deserunt
-                        quia nobis doloribus autem eos dicta.</p>
-                </div>
-
-                <div class="div__carrito">
-                    <a href="#">Comprar</a> <i class="fas fa-shopping-cart"></i>
-                </div>
-            </div>
-
-            <div class="div__producto">
-
-                <div class="div__producto__img">
-                    <img src="img/productos-10.jpg" alt="producto">
-
-                    <div class="producto__detalle">
-                        <p>Precio: 100Bs.</p>
-                        <p>Marca: Sony</p>
-                        <p>Color: Rosado</p>
-                    </div>
-                </div>
-
-                <div class="producto__info">
-                    <h2>Esmalte Rosado</h2>
-
-                    <p>Tenetur vel enim veritatis distinctio, repudiandae sit praesentium asperiores sequi quos deserunt
-                        quia nobis doloribus autem eos dicta.</p>
-                </div>
-
-                <div class="div__carrito">
-                    <a href="#">Comprar</a> <i class="fas fa-shopping-cart"></i>
-                </div>
-            </div>
-
-            <div class="div__producto">
-
-                <div class="div__producto__img">
-                    <img src="img/productos-9.jpg" alt="producto">
-
-                    <div class="producto__detalle">
-                        <p>Precio: 100Bs.</p>
-                        <p>Marca: Sony</p>
-                        <p>Color: Rosado</p>
-                    </div>
-                </div>
-
-                <div class="producto__info">
-                    <h2>Esmalte Rosado</h2>
-
-                    <p>Tenetur vel enim veritatis distinctio, repudiandae sit praesentium asperiores sequi quos deserunt
-                        quia nobis doloribus autem eos dicta.</p>
-                </div>
-
-                <div class="div__carrito">
-                    <a href="#">Comprar</a> <i class="fas fa-shopping-cart"></i>
-                </div>
-            </div>
-
-            <div class="div__producto">
-
-                <div class="div__producto__img">
-                    <img src="img/productos-8.jpg" alt="producto">
-
-                    <div class="producto__detalle">
-                        <p>Precio: 100Bs.</p>
-                        <p>Marca: Sony</p>
-                        <p>Color: Rosado</p>
-                    </div>
-                </div>
-
-                <div class="producto__info">
-                    <h2>Esmalte Rosado</h2>
-
-                    <p>Tenetur vel enim veritatis distinctio, repudiandae sit praesentium asperiores sequi quos deserunt
-                        quia nobis doloribus autem eos dicta.</p>
-                </div>
-
-                <div class="div__carrito">
-                    <a href="#">Comprar</a> <i class="fas fa-shopping-cart"></i>
-                </div>
-            </div>
-
-            <div class="div__producto">
-
-                <div class="div__producto__img">
-                    <img src="img/productos-4.jpg" alt="producto">
-
-                    <div class="producto__detalle">
-                        <p>Precio: 100Bs.</p>
-                        <p>Marca: Sony</p>
-                        <p>Color: Rosado</p>
-                    </div>
-                </div>
-
-                <div class="producto__info">
-                    <h2>Esmalte Rosado</h2>
-
-                    <p>Tenetur vel enim veritatis distinctio, repudiandae sit praesentium asperiores sequi quos deserunt
-                        quia nobis doloribus autem eos dicta.</p>
-                </div>
-
-                <div class="div__carrito">
-                    <a href="#">Comprar</a> <i class="fas fa-shopping-cart"></i>
-                </div>
-            </div>
-
-            <div class="div__producto">
-
-                <div class="div__producto__img">
-                    <img src="img/productos-3.jpg" alt="producto">
-
-                    <div class="producto__detalle">
-                        <p>Precio: 100Bs.</p>
-                        <p>Marca: Sony</p>
-                        <p>Color: Rosado</p>
-                    </div>
-                </div>
-
-                <div class="producto__info">
-                    <h2>Esmalte Rosado</h2>
-
-                    <p>Tenetur vel enim veritatis distinctio, repudiandae sit praesentium asperiores sequi quos deserunt
-                        quia nobis doloribus autem eos dicta.</p>
-                </div>
-
-                <div class="div__carrito">
-                    <a href="#">Comprar</a> <i class="fas fa-shopping-cart"></i>
-                </div>
-            </div>
-
-            <div class="div__producto">
-
-                <div class="div__producto__img">
-                    <img src="img/productos-2.jpg" alt="producto">
-
-                    <div class="producto__detalle">
-                        <p>Precio: 100Bs.</p>
-                        <p>Marca: Sony</p>
-                        <p>Informacion: Ros sdfsfsfsfsdsfsdfsdfdsfado</p>
-                    </div>
-                </div>
-
-                <div class="producto__info">
-                    <h2>Esmalte Rosado</h2>
-
-                    <p>Tenetur vel enim veritatis distinctio, repudiandae sit praesentium asperiores sequi quos deserunt
-                        quia nobis doloribus autem eos dicta.</p>
-                </div>
-
-                <div class="div__carrito">
-                    <a href="#">Comprar</a> <i class="fas fa-shopping-cart"></i>
-                </div>
-            </div>
-
-            <div class="div__producto">
-
-                <div class="div__producto__img">
-                    <img src="img/productos-5.jpg" alt="producto">
-
-                    <div class="producto__detalle">
-                        <p>Precio: 100Bs.</p>
-                        <p>Marca: Sony</p>
-                        <p>Color: Rosado</p>
-                    </div>
-                </div>
-
-                <div class="producto__info">
-                    <h2>Esmalte Rosado</h2>
-
-                    <p>Tenetur vel enim veritatis distinctio, repudiandae sit praesentium asperiores sequi quos deserunt
-                        quia nobis doloribus autem eos dicta.</p>
-                </div>
-
-                <div class="div__carrito">
-                    <a href="#">Comprar</a> <i class="fas fa-shopping-cart"></i>
-                </div>
-            </div>
         </div>
 
         <hr>
