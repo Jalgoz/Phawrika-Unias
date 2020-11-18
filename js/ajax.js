@@ -70,4 +70,43 @@ $(() => {
             }
         });
     });
+
+    // AJAX registro producto
+    /* $('#frmInsertarP').submit( function (e) {
+        e.preventDefault();
+        $.ajax('accionesProducto.php', {
+            data: $(this).serialize(),
+            success: function (data) {
+                console.log(data);
+                if (data == 'ERROR'){
+                    alert('Se producto un error');
+                }else {
+                    $('#frmInsertarP')[0].reset();
+                    alert('Producto registrado satisfactoriamente');
+                }   
+            }
+        });
+    }); */
+
+    /* $(".btnProducto").on('click', function() {
+        let formData = new FormData();
+        let files = $('#foto')[0].files[0];
+        formData.append('file',files);
+        $.ajax({
+            url: 'accionesProducto.php',
+            type: 'post',
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                if (response != 0) {
+                    $('#frmInsertarP')[0].reset();
+                    alert('Producto registrado satisfactoriamente');
+                } else {
+                    alert('Se producto un error');
+                }
+            }
+        });
+        return false;
+    }); */
 });

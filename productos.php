@@ -1,4 +1,9 @@
     <?php include_once("particiones/head.php"); ?>
+    <?php include_once("claseProducto.php");
+                $arrayProducto = producto::seleccionarTodo();     
+                // var_dump($arrayUsuario);  
+    ?>
+    <?php include_once("particiones/head2.php"); ?>
     
         <div class="header-inicio__titulo">
             <h1>PRODUCTOS</h1>
@@ -20,13 +25,15 @@
         <hr>
 
         <div class="div__productos">
+
+            <?php foreach($arrayProducto as $productos){?>
             <div class="div__producto">
 
                 <div class="div__producto__img">
                     <img src="img/productos-1.jpg" alt="producto">
 
                     <div class="producto__detalle">
-                        <p>Precio: 100Bs.</p>
+                        <p>Precio: <?=$productos->getPrecio()?>.</p>
                         <p>Marca: Sony</p>
                         <p>Color: Rosado</p>
                     </div>
@@ -43,6 +50,8 @@
                     <a href="#">Comprar</a> <i class="fas fa-shopping-cart"></i>
                 </div>
             </div>
+
+            <?php }  ?>
 
             <div class="div__producto">
 

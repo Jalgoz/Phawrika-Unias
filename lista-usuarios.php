@@ -7,6 +7,8 @@
     <?php include_once("particiones/head_perfil2.php"); ?>
 
     <main class="main__table">
+      <h2 class="table-title">LISTA USUARIOS</h2>
+
       <table class="table-list" border="1">
         <thead>
             <tr>

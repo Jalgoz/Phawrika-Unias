@@ -7,7 +7,7 @@
 
     <div class="perfil__agregar-usuario form__especial">
 
-        <form action="accionesUsuarios.php" method="post" id="frmModificar" class="modificar__usuario">
+        <form action="accionesUsuarios.php" method="post" id="frmModificar" class="modificar__usuario frms">
             <div class="view__register-title">
                 <h3><span class="span-primero">MODIFICAR</span><span class="span-segundo"> USUARIO</span></h3>
             </div>

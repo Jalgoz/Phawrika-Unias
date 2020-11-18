@@ -1,5 +1,6 @@
 
     <?php include_once("particiones/head.php"); ?>
+    <?php include_once("particiones/head2.php"); ?>
     
         <div class="header-inicio__titulo">
             <h1>CONTACTANOS</h1>

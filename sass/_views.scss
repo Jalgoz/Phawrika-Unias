@@ -16,7 +16,7 @@
     z-index: 500 !important;
 }
 
-#frmInsertar, #frmLogIn, #frmModificar {
+#frmInsertar, #frmLogIn, #frmInsertarP, .frms {
     z-index: 1300;
     padding: map-get($map: utilities.$pad, $key: 'XXL');
     padding-top: 0;
@@ -25,6 +25,13 @@
     border: 6px solid utilities.$color_celeste;
     border-radius: 7px;
 
+    #textArea {
+        width: 250px;
+        border: 3px solid utilities.$color_gris;
+        font-family: utilities.$parrafo;
+        height: 100px;
+    }
+
     input {
         width: 250px;
         height: 25px;
@@ -32,6 +39,7 @@
         border-bottom: 3px solid utilities.$color_gris;
         padding-left: 5px;
         transition: all 300ms;
+        font-family: utilities.$parrafo;
 
         &:focus {
             border-bottom: 3px solid utilities.$color_celeste;
@@ -209,7 +217,7 @@
     padding: 30px 0;
     background-color: utilities.$color_gris;
     position: fixed;
-    z-index: 1000;
+    z-index: 1500;
     top: 0;
     left: 0;
     @include utilities.display-flex-row(3);
@@ -334,4 +342,10 @@
 .perfil__agregar-usuario {
     margin-top: 100px;
     @include utilities.display-flex-row(1);
+}
+
+.table-title {
+    text-align: center;
+    font-family: utilities.$fuente_titulo;
+    padding: 25px;
 }

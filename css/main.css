@@ -462,7 +462,7 @@
   text-decoration: underline;
 }
 
-.modificar__usuario p {
+.modificar__usuario p, .modificar__producto p {
   top: -18px !important;
 }
 
@@ -1693,7 +1693,7 @@ footer .rights strong a:hover {
   z-index: 500 !important;
 }
 
-#frmInsertar, #frmLogIn, #frmModificar {
+#frmInsertar, #frmLogIn, #frmInsertarP, .frms {
   z-index: 1300;
   padding: 3em;
   padding-top: 0;
@@ -1702,7 +1702,13 @@ footer .rights strong a:hover {
   border: 6px solid #00adb5;
   border-radius: 7px;
 }
-#frmInsertar input, #frmLogIn input, #frmModificar input {
+#frmInsertar #textArea, #frmLogIn #textArea, #frmInsertarP #textArea, .frms #textArea {
+  width: 250px;
+  border: 3px solid #393e46;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100px;
+}
+#frmInsertar input, #frmLogIn input, #frmInsertarP input, .frms input {
   width: 250px;
   height: 25px;
   border: none;
@@ -1710,15 +1716,16 @@ footer .rights strong a:hover {
   padding-left: 5px;
   -webkit-transition: all 300ms;
   transition: all 300ms;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#frmInsertar input:focus, #frmLogIn input:focus, #frmModificar input:focus {
+#frmInsertar input:focus, #frmLogIn input:focus, #frmInsertarP input:focus, .frms input:focus {
   border-bottom: 3px solid #00adb5;
 }
-#frmInsertar .view__register-field--placeholder, #frmLogIn .view__register-field--placeholder, #frmModificar .view__register-field--placeholder {
+#frmInsertar .view__register-field--placeholder, #frmLogIn .view__register-field--placeholder, #frmInsertarP .view__register-field--placeholder, .frms .view__register-field--placeholder {
   margin-bottom: 25px;
   position: relative;
 }
-#frmInsertar .view__register-field--placeholder p, #frmLogIn .view__register-field--placeholder p, #frmModificar .view__register-field--placeholder p {
+#frmInsertar .view__register-field--placeholder p, #frmLogIn .view__register-field--placeholder p, #frmInsertarP .view__register-field--placeholder p, .frms .view__register-field--placeholder p {
   top: 2px;
   left: 5px;
   opacity: 0.5;
@@ -1727,14 +1734,14 @@ footer .rights strong a:hover {
   -webkit-transition: all 400ms;
   transition: all 400ms;
 }
-#frmInsertar .view__register-field--placeholder:hover p, #frmLogIn .view__register-field--placeholder:hover p, #frmModificar .view__register-field--placeholder:hover p {
+#frmInsertar .view__register-field--placeholder:hover p, #frmLogIn .view__register-field--placeholder:hover p, #frmInsertarP .view__register-field--placeholder:hover p, .frms .view__register-field--placeholder:hover p {
   top: -19px !important;
 }
-#frmInsertar .view__register-field--placeholder-date, #frmLogIn .view__register-field--placeholder-date, #frmModificar .view__register-field--placeholder-date {
+#frmInsertar .view__register-field--placeholder-date, #frmLogIn .view__register-field--placeholder-date, #frmInsertarP .view__register-field--placeholder-date, .frms .view__register-field--placeholder-date {
   margin-bottom: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#frmInsertar .view__register-field--placeholder-date p, #frmLogIn .view__register-field--placeholder-date p, #frmModificar .view__register-field--placeholder-date p {
+#frmInsertar .view__register-field--placeholder-date p, #frmLogIn .view__register-field--placeholder-date p, #frmInsertarP .view__register-field--placeholder-date p, .frms .view__register-field--placeholder-date p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-left: 5px;
   opacity: 0.5;
@@ -1926,7 +1933,7 @@ footer .rights strong a:hover {
   padding: 30px 0;
   background-color: #393e46;
   position: fixed;
-  z-index: 1000;
+  z-index: 1500;
   top: 0;
   left: 0;
   display: -webkit-box;
@@ -2100,6 +2107,12 @@ footer .rights strong a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.table-title {
+  text-align: center;
+  font-family: "Josefin";
+  padding: 25px;
 }
 
 /*----------------------***** RESPONSIVE ***** ----------------------*/
@@ -2703,6 +2716,20 @@ footer .rights strong a:hover {
   }
   .view__register form input, .view__register form select {
     width: 200px !important;
+  }
+
+  .view__register-field--placeholder-gender input, .view__register-field--placeholder-gender select, .view__register-field--placeholder-privilage input, .view__register-field--placeholder-privilage select {
+    width: 200px !important;
+  }
+
+  #frmInsertar #textArea, #frmLogIn #textArea, #frmModificar #textArea, #frmInsertarP #textArea, .frms #textArea {
+    width: 200px;
+  }
+  #frmInsertar input, #frmLogIn input, #frmModificar input, #frmInsertarP input, .frms input {
+    width: 200px;
+  }
+  #frmInsertar h3, #frmLogIn h3, #frmModificar h3, #frmInsertarP h3, .frms h3 {
+    text-align: center;
   }
 
   .botones {

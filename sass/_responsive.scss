@@ -569,6 +569,23 @@
             width: 200px !important;
         }
     }
+    .view__register-field--placeholder-gender, .view__register-field--placeholder-privilage {
+        input, select {
+            width: 200px !important;
+        }
+    }
+
+    #frmInsertar, #frmLogIn, #frmModificar,#frmInsertarP, .frms { 
+        #textArea {
+            width: 200px;
+        }
+        input {
+            width: 200px;
+        }
+        h3 {
+            text-align: center;
+        }
+    }
 
     .botones {
         @include utilities.display-flex-column(1);

@@ -9,9 +9,9 @@
         private $nuevoPrecio;
         private $cantidad;
         private $informacion;
-
+        private $imagen;
         
-        public function __Construct($c1,$c2,$c3,$c4,$c5,$c6,$c7,$id=null)
+        public function __Construct($c1,$c2,$c3,$c4,$c5,$c6,$c7,$c8,$id=null)
         {
             $this->id_producto=$id;
             $this->nombre=$c1;
@@ -21,6 +21,7 @@
             $this->nuevoPrecio=$c5;
             $this->cantidad=$c6;
             $this->informacion=$c7;
+            $this->imagen=$c8;
         }
         //getter
         public function getId(){
@@ -46,6 +47,9 @@
         }
         public function getInformacion(){
             return $this->informacion;
+        }
+        public function getImagen(){
+            return $this->imagen;
         }
        
         //setter
@@ -73,10 +77,13 @@
         public function setInformacion($var){
             $this->informacion = $var;
         }
+        public function setImagen($var){
+            $this->imagen = $var;
+        }
 
         public function insercion(){        
             $con=conexion::conectar();         
-            $sql="INSERT INTO producto(nombre,marca,precio,rebaja,nuevoPrecio,cantidad,informacion) VALUES(:c1,:c2,:c3,:c4,:c5,:c6,:c7)";
+            $sql="INSERT INTO producto(nombre,marca,precio,rebaja,nuevoPrecio,cantidad,informacion,imagen) VALUES(:c1,:c2,:c3,:c4,:c5,:c6,:c7,:c8)";
             $query=$con->prepare($sql);
             $query->bindParam(":c1",$this->nombre);
             $query->bindParam(":c2",$this->marca);
@@ -84,7 +91,8 @@
             $query->bindParam(":c4",$this->rebaja);
             $query->bindParam(":c5",$this->nuevoPrecio);
             $query->bindParam(":c6",$this->cantidad);
-            $query->bindParam(":c7",$this->informacion);   
+            $query->bindParam(":c7",$this->informacion);
+            $query->bindParam(":c8",$this->imagen);   
             //var_dump($this->nombre);
             return $query->execute();
         }
@@ -95,7 +103,7 @@
             $query=$con->prepare($sql);
             $query->execute();
             // var_dump($query->execute());
-            $query->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,'producto',array('nombre','marca','precio','rebaja','nuevoPrecio','cantidad','informacion',1));
+            $query->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,'producto',array('nombre','marca','precio','rebaja','nuevoPrecio','cantidad','informacion','imagen',1));
             return $query->fetchAll();
         }
 
@@ -105,23 +113,23 @@
             $query=$con->prepare($sql);
             $query->bindParam(":id",$id);
             $query->execute();
-            $query->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,'producto',array('nombre','marca','precio','rebaja','nuevoPrecio','cantidad','informacion',1));
+            $query->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,'producto',array('nombre','marca','precio','rebaja','nuevoPrecio','cantidad','informacion','imagen',1));
             return $query->fetchAll();
         }
 
-        public function modificar()
-        {
+        public function modificar(){
             $con=conexion::conectar();
-            var_dump($this->id);
-            $sql="UPDATE usuarios SET nombre=:c1,marca=:c2,precio=:c3,rebaja=:c4,nuevoPrecio=:c5,cantidad=:c6,informacion=:c7 WHERE id_producto=:id";
+            $sql="UPDATE producto SET nombre=:c1,marca=:c2,precio=:c3,rebaja=:c4,nuevoPrecio=:c5,cantidad=:c6,informacion=:c7,imagen=:c8 WHERE id_producto=:id";
             $query=$con->prepare($sql);
+            $query->bindParam(":id",$this->id_producto);
             $query->bindParam(":c1",$this->nombre);
             $query->bindParam(":c2",$this->marca);
             $query->bindParam(":c3",$this->precio);
             $query->bindParam(":c4",$this->rebaja);
             $query->bindParam(":c5",$this->nuevoPrecio);
             $query->bindParam(":c6",$this->cantidad);
-            $query->bindParam(":c7",$this->informacion);  
+            $query->bindParam(":c7",$this->informacion); 
+            $query->bindParam(":c8",$this->imagen);  
             return $query->execute();
         }
 
